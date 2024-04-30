@@ -27,7 +27,7 @@ jobs:
     - name: Upload generated files
       uses: devops-infra/action-commit-push@master
       with:
-        github_token: "${{ secrets.GITHUB_TOKEN }}"
+        github_token: "${{ secrets.AWS_REPO_WRITE_TOKEN }}"
         add_timestamp: true
         commit_prefix: "[AUTO]"
         commit_message: "Commit of generated docs"
