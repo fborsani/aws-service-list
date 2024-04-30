@@ -102,7 +102,7 @@ def main():
              if res:
                  service_dict[threads[thread]] = res
 
-    write_to_file("./aws_services.txt",print_text(service_dict))
+    write_to_file("./generated_docs/aws_services.txt",print_text(service_dict))
 
 
 if __name__ == "__main__":
