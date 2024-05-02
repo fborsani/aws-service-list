@@ -1,211 +1,9 @@
-<h1>AWS Account Management</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">account</a></td>
-                    <td>arn:\${Partition}:account::\${Account}:account</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">accountInOrganization</a></td>
-                    <td>arn:\${Partition}:account::\${ManagementAccountId}:account/o-\${OrganizationId}/\${MemberAccountId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon API Gateway</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigateway.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="execute-api-general">execute-api-general</a></td>
-                    <td>arn:\${Partition}:execute-api:\${Region}:\${Account}:\${ApiId}/\${Stage}/\${Method}/\${ApiSpecificResourcePath}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AmazonMediaImport</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS App Mesh Preview</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmeshpreview.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html">mesh</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html">virtualService</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualService/\${VirtualServiceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">virtualNode</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualNode/\${VirtualNodeName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html">virtualRouter</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualRouter/\${VirtualRouterName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html">route</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualRouter/\${VirtualRouterName}/route/\${RouteName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">virtualGateway</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualGateway/\${VirtualGatewayName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">gatewayRoute</a></td>
-                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualGateway/\${VirtualGatewayName}/gatewayRoute/\${GatewayRouteName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Amplify</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplify.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">apps</a></td>
-                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">branches</a></td>
-                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/branches/\${BranchName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">jobs</a></td>
-                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/branches/\${BranchName}/jobs/\${JobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">domains</a></td>
-                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/domains/\${DomainName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">webhooks</a></td>
-                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:webhooks/\${WebhookId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS App2Container</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapp2container.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Activate</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactivate.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Apache Kafka APIs for Amazon MSK clusters</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">cluster</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:cluster/\${ClusterName}/\${ClusterUuid}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">topic</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:topic/\${ClusterName}/\${ClusterUuid}/\${TopicName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">group</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:group/\${ClusterName}/\${ClusterUuid}/\${GroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">transactional-id</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:transactional-id/\${ClusterName}/\${ClusterUuid}/\${TransactionalId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Amplify Admin</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyadmin.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend.html">created-backend</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend.html">backend</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-api-backendenvironmentname-details.html">environment</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/environments/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-api.html">api</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/api/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-auth.html">auth</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/auth/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-job-backendenvironmentname.html">job</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/job/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-config.html">config</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/config/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-token.html">token</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/challenge/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-storage.html">storage</a></td>
-                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/storage/*</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS App Runner</h1>
+<h1>AWS App Runner</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapprunner.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -238,38 +36,64 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Amplify UI Builder</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyuibuilder.html</p>
+        <h1>AWS Account Management</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_CodegenJob.html">CodegenJobResource</a></td>
-                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/codegen-jobs/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">account</a></td>
+                    <td>arn:\${Partition}:account::\${Account}:account</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Component.html">ComponentResource</a></td>
-                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/components/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Form.html">FormResource</a></td>
-                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/forms/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Theme.html">ThemeResource</a></td>
-                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/themes/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">accountInOrganization</a></td>
+                    <td>arn:\${Partition}:account::\${ManagementAccountId}:account/o-\${OrganizationId}/\${MemberAccountId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Application Cost Profiler Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationcostprofilerservice.html</p>
+        <h1>Amazon API Gateway</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigateway.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="execute-api-general">execute-api-general</a></td>
+                    <td>arn:\${Partition}:execute-api:\${Region}:\${Account}:\${ApiId}/\${Stage}/\${Method}/\${ApiSpecificResourcePath}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS App2Container</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapp2container.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AmazonMediaImport</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Activate</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactivate.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -279,7 +103,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -400,12 +224,152 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS App Mesh Preview</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmeshpreview.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html">mesh</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html">virtualService</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualService/\${VirtualServiceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">virtualNode</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualNode/\${VirtualNodeName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html">virtualRouter</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualRouter/\${VirtualRouterName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html">route</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualRouter/\${VirtualRouterName}/route/\${RouteName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">virtualGateway</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualGateway/\${VirtualGatewayName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">gatewayRoute</a></td>
+                    <td>arn:\${Partition}:appmesh-preview:\${Region}:\${Account}:mesh/\${MeshName}/virtualGateway/\${VirtualGatewayName}/gatewayRoute/\${GatewayRouteName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Amplify UI Builder</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyuibuilder.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_CodegenJob.html">CodegenJobResource</a></td>
+                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/codegen-jobs/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Component.html">ComponentResource</a></td>
+                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/components/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Form.html">FormResource</a></td>
+                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/forms/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/API_Theme.html">ThemeResource</a></td>
+                    <td>arn:\${Partition}:amplifyuibuilder:\${Region}:\${Account}:app/\${AppId}/environment/\${EnvironmentName}/themes/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Amplify</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplify.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">apps</a></td>
+                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">branches</a></td>
+                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/branches/\${BranchName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">jobs</a></td>
+                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/branches/\${BranchName}/jobs/\${JobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">domains</a></td>
+                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:apps/\${AppId}/domains/\${DomainName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">webhooks</a></td>
+                    <td>arn:\${Partition}:amplify:\${Region}:\${Account}:webhooks/\${WebhookId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Amplify Admin</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyadmin.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend.html">created-backend</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend.html">backend</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-api-backendenvironmentname-details.html">environment</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/environments/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-api.html">api</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/api/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-auth.html">auth</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/auth/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-job-backendenvironmentname.html">job</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/job/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-config.html">config</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/config/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-token.html">token</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/challenge/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/amplify-admin-ui/latest/APIReference/backend-appid-storage.html">storage</a></td>
+                    <td>arn:\${Partition}:amplifybackend:\${Region}:\${Account}:/backend/\${AppId}/storage/*</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS App Mesh</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmesh.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -438,25 +402,87 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon AppFlow</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html</p>
+        <h1>Apache Kafka APIs for Amazon MSK clusters</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorProfile.html">connectorprofile</a></td>
-                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:connectorprofile/\${ProfileName}</td>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">cluster</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:cluster/\${ClusterName}/\${ClusterUuid}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_FlowDefinition.html">flow</a></td>
-                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:flow/\${FlowName}</td>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">topic</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:topic/\${ClusterName}/\${ClusterUuid}/\${TopicName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorDetail.html">connector</a></td>
-                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:connector/\${ConnectorLabel}</td>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">group</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:group/\${ClusterName}/\${ClusterUuid}/\${GroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">transactional-id</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:transactional-id/\${ClusterName}/\${ClusterUuid}/\${TransactionalId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Alexa for Business</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_alexaforbusiness.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Profile.html">profile</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:profile/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Room.html">room</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:room/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Device.html">device</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:device/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_SkillGroup.html">skillgroup</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:skill-group/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_UserData.html">user</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:user/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_AddressBook.html">addressbook</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:address-book/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_ConferenceProvider.html">conferenceprovider</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:conference-provider/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Contact.html">contact</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:contact/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_BusinessReportSchedule.html">schedule</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:schedule/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_NetworkProfile.html">networkprofile</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:network-profile/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Gateway.html">gateway</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:gateway/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_GatewayGroup.html">gatewaygroup</a></td>
+                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:gateway-group/\${ResourceId}</td>
                 </tr>
             </tbody>
         </table>
@@ -465,7 +491,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -638,12 +664,46 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon AppIntegrations</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappintegrations.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegration.html">event-integration</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:event-integration/\${EventIntegrationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegrationAssociation.html">event-integration-association</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:event-integration-association/\${EventIntegrationName}/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DataIntegrationSummary.html">data-integration</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:data-integration/\${DataIntegrationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DataIntegrationAssociationSummary.html">data-integration-association</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:data-integration-association/\${DataIntegrationId}/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ApplicationSummary.html">application</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:application/\${ApplicationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ApplicationAssociationSummary.html">application-association</a></td>
+                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:application-association/\${ApplicationId}/\${ApplicationAssociationId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS AppConfig</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappconfig.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -684,46 +744,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Application Auto Scaling</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationautoscaling.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">ScalableTarget</a></td>
-                    <td>arn:\${Partition}:application-autoscaling:\${Region}:\${Account}:scalable-target/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Application Discovery Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationdiscoveryservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Application Discovery Arsenal</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>AWS AppFabric</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappfabric.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -744,37 +770,173 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon AppIntegrations</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappintegrations.html</p>
+        <h1>Amazon AppFlow</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegration.html">event-integration</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:event-integration/\${EventIntegrationName}</td>
+                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorProfile.html">connectorprofile</a></td>
+                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:connectorprofile/\${ProfileName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegrationAssociation.html">event-integration-association</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:event-integration-association/\${EventIntegrationName}/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_FlowDefinition.html">flow</a></td>
+                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:flow/\${FlowName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DataIntegrationSummary.html">data-integration</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:data-integration/\${DataIntegrationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorDetail.html">connector</a></td>
+                    <td>arn:\${Partition}:appflow:\${Region}:\${Account}:connector/\${ConnectorLabel}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Application Transformation Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Application Auto Scaling</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationautoscaling.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">ScalableTarget</a></td>
+                    <td>arn:\${Partition}:application-autoscaling:\${Region}:\${Account}:scalable-target/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Application Discovery Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationdiscoveryservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Application Cost Profiler Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationcostprofilerservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Application Discovery Arsenal</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Artifact</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html">report-package</a></td>
+                    <td>arn:\${Partition}:artifact:::report-package/*</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DataIntegrationAssociationSummary.html">data-integration-association</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:data-integration-association/\${DataIntegrationId}/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html">customer-agreement</a></td>
+                    <td>arn:\${Partition}:artifact::\${Account}:customer-agreement/*</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ApplicationSummary.html">application</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:application/\${ApplicationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html">agreement</a></td>
+                    <td>arn:\${Partition}:artifact:::agreement/*</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ApplicationAssociationSummary.html">application-association</a></td>
-                    <td>arn:\${Partition}:app-integrations:\${Region}:\${Account}:application-association/\${ApplicationId}/\${ApplicationAssociationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html">report</a></td>
+                    <td>arn:\${Partition}:artifact:\${Region}::report/\${ReportId}:\${Version}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS AppSync</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappsync.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/attaching-a-data-source.html">datasource</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/datasources/\${DatasourceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/custom-domain-name.html">domain</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:domainnames/\${DomainName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html">graphqlapi</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/configuring-resolvers.html">field</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/types/\${TypeName}/fields/\${FieldName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/designing-your-schema.html#adding-a-root-query-type">type</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/types/\${TypeName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html">function</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/functions/\${FunctionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/merged-api.html">sourceApiAssociation</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${MergedGraphQLAPIId}/sourceApiAssociations/\${Associationid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/merged-api.html">mergedApiAssociation</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${SourceGraphQLAPIId}/mergedApiAssociations/\${Associationid}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Audit Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsauditmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_Assessment.html">assessment</a></td>
+                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessment/\${AssessmentId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_AssessmentFramework.html">assessmentFramework</a></td>
+                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessmentFramework/\${AssessmentFrameworkId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_AssessmentControlSet.html">assessmentControlSet</a></td>
+                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessment/\${AssessmentId}/controlSet/\${ControlSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_Control.html">control</a></td>
+                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:control/\${ControlId}</td>
                 </tr>
             </tbody>
         </table>
@@ -783,7 +945,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -828,149 +990,25 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Alexa for Business</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_alexaforbusiness.html</p>
+        <h1>Amazon Athena</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonathena.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Profile.html">profile</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:profile/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/datacatalogs-example-policies.html">datacatalog</a></td>
+                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:datacatalog/\${DataCatalogName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Room.html">room</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:room/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/example-policies-workgroup.html">workgroup</a></td>
+                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:workgroup/\${WorkGroupName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Device.html">device</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:device/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_SkillGroup.html">skillgroup</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:skill-group/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_UserData.html">user</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:user/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_AddressBook.html">addressbook</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:address-book/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_ConferenceProvider.html">conferenceprovider</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:conference-provider/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Contact.html">contact</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:contact/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_BusinessReportSchedule.html">schedule</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:schedule/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_NetworkProfile.html">networkprofile</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:network-profile/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_Gateway.html">gateway</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:gateway/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/a4b/latest/APIReference/API_GatewayGroup.html">gatewaygroup</a></td>
-                    <td>arn:\${Partition}:a4b:\${Region}:\${Account}:gateway-group/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Artifact</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html">report-package</a></td>
-                    <td>arn:\${Partition}:artifact:::report-package/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html">customer-agreement</a></td>
-                    <td>arn:\${Partition}:artifact::\${Account}:customer-agreement/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html">agreement</a></td>
-                    <td>arn:\${Partition}:artifact:::agreement/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html">report</a></td>
-                    <td>arn:\${Partition}:artifact:\${Region}::report/\${ReportId}:\${Version}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Auto Scaling</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsautoscaling.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Application Transformation Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS AppSync</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappsync.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/attaching-a-data-source.html">datasource</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/datasources/\${DatasourceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/custom-domain-name.html">domain</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:domainnames/\${DomainName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html">graphqlapi</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/configuring-resolvers.html">field</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/types/\${TypeName}/fields/\${FieldName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/designing-your-schema.html#adding-a-root-query-type">type</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/types/\${TypeName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html">function</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}/functions/\${FunctionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/merged-api.html">sourceApiAssociation</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${MergedGraphQLAPIId}/sourceApiAssociations/\${Associationid}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appsync/latest/devguide/merged-api.html">mergedApiAssociation</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${SourceGraphQLAPIId}/mergedApiAssociations/\${Associationid}</td>
+                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/example-policies-capacity-reservations.html">capacity-reservation</a></td>
+                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:capacity-reservation/\${CapacityReservationName}</td>
                 </tr>
             </tbody>
         </table>
@@ -979,7 +1017,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1000,222 +1038,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Billing</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Audit Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsauditmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_Assessment.html">assessment</a></td>
-                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessment/\${AssessmentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_AssessmentFramework.html">assessmentFramework</a></td>
-                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessmentFramework/\${AssessmentFrameworkId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_AssessmentControlSet.html">assessmentControlSet</a></td>
-                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:assessment/\${AssessmentId}/controlSet/\${ControlSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/API_Control.html">control</a></td>
-                    <td>arn:\${Partition}:auditmanager:\${Region}:\${Account}:control/\${ControlId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Backup Gateway</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupgateway.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_Gateway.html">gateway</a></td>
-                    <td>arn:\${Partition}:backup-gateway::\${Account}:gateway/\${GatewayId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_Hypervisor.html">hypervisor</a></td>
-                    <td>arn:\${Partition}:backup-gateway::\${Account}:hypervisor/\${HypervisorId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_VirtualMachine.html">virtualmachine</a></td>
-                    <td>arn:\${Partition}:backup-gateway::\${Account}:vm/\${VirtualmachineId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Athena</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonathena.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/datacatalogs-example-policies.html">datacatalog</a></td>
-                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:datacatalog/\${DataCatalogName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/example-policies-workgroup.html">workgroup</a></td>
-                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:workgroup/\${WorkGroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/athena/latest/ug/example-policies-capacity-reservations.html">capacity-reservation</a></td>
-                    <td>arn:\${Partition}:athena:\${Region}:\${Account}:capacity-reservation/\${CapacityReservationName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Backup</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html">backupVault</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:backup-vault:\${BackupVaultName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html">backupPlan</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:backup-plan:\${BackupPlanId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/recovery-points.html">recoveryPoint</a></td>
-                    <td>arn:\${Partition}:\${Vendor}:\${Region}:*:\${ResourceType}:\${RecoveryPointId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/working-with-audit-frameworks.html">framework</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:framework:\${FrameworkName}-\${FrameworkId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/create-report-plan-api.html">reportPlan</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:report-plan:\${ReportPlanName}-\${ReportPlanId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/legalhold.html">legalHold</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:legal-hold:\${LegalHoldId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html">restoreTestingPlan</a></td>
-                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:restore-testing-plan:\${RestoreTestingPlanName}-\${RestoreTestingPlanId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Backup storage</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupstorage.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon AppStream 2.0</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappstream2.0.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">fleet</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:fleet/\${FleetName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">image</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:image/\${ImageName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">image-builder</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:image-builder/\${ImageBuilderName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">stack</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:stack/\${StackName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">app-block</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:app-block/\${AppBlockName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">application</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:application/\${ApplicationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">app-block-builder</a></td>
-                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:app-block-builder/\${AppBlockBuilderName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Billing Conductor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">billinggroup</a></td>
-                    <td>arn:\${Partition}:billingconductor::\${Account}:billinggroup/\${BillingGroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">pricingplan</a></td>
-                    <td>arn:\${Partition}:billingconductor::\${Account}:pricingplan/\${PricingPlanId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">pricingrule</a></td>
-                    <td>arn:\${Partition}:billingconductor::\${Account}:pricingrule/\${PricingRuleId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">customlineitem</a></td>
-                    <td>arn:\${Partition}:billingconductor::\${Account}:customlineitem/\${CustomLineItemId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Braket</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#resources">quantum-task</a></td>
-                    <td>arn:\${Partition}:braket:\${Region}:\${Account}:quantum-task/\${RandomId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#resources">job</a></td>
-                    <td>arn:\${Partition}:braket:\${Region}:\${Account}:job/\${JobName}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Batch</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1244,12 +1072,22 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Billing Console</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconsole.html</p>
+        <h1>AWS Backup storage</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupstorage.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Billing</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -1259,7 +1097,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1308,12 +1146,120 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon AppStream 2.0</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappstream2.0.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">fleet</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:fleet/\${FleetName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">image</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:image/\${ImageName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">image-builder</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:image-builder/\${ImageBuilderName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">stack</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:stack/\${StackName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">app-block</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:app-block/\${AppBlockName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">application</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:application/\${ApplicationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-concepts">app-block-builder</a></td>
+                    <td>arn:\${Partition}:appstream:\${Region}:\${Account}:app-block-builder/\${AppBlockBuilderName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Backup</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html">backupVault</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:backup-vault:\${BackupVaultName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html">backupPlan</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:backup-plan:\${BackupPlanId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/recovery-points.html">recoveryPoint</a></td>
+                    <td>arn:\${Partition}:\${Vendor}:\${Region}:*:\${ResourceType}:\${RecoveryPointId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/working-with-audit-frameworks.html">framework</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:framework:\${FrameworkName}-\${FrameworkId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/create-report-plan-api.html">reportPlan</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:report-plan:\${ReportPlanName}-\${ReportPlanId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/legalhold.html">legalHold</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:legal-hold:\${LegalHoldId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html">restoreTestingPlan</a></td>
+                    <td>arn:\${Partition}:backup:\${Region}:\${Account}:restore-testing-plan:\${RestoreTestingPlanName}-\${RestoreTestingPlanId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Billing Console</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconsole.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Backup Gateway</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupgateway.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_Gateway.html">gateway</a></td>
+                    <td>arn:\${Partition}:backup-gateway::\${Account}:gateway/\${GatewayId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_Hypervisor.html">hypervisor</a></td>
+                    <td>arn:\${Partition}:backup-gateway::\${Account}:hypervisor/\${HypervisorId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BGW_VirtualMachine.html">virtualmachine</a></td>
+                    <td>arn:\${Partition}:backup-gateway::\${Account}:vm/\${VirtualmachineId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Billing And Cost Management Data Exports</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1326,12 +1272,80 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Auto Scaling</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsautoscaling.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Billing Conductor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">billinggroup</a></td>
+                    <td>arn:\${Partition}:billingconductor::\${Account}:billinggroup/\${BillingGroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">pricingplan</a></td>
+                    <td>arn:\${Partition}:billingconductor::\${Account}:pricingplan/\${PricingPlanId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">pricingrule</a></td>
+                    <td>arn:\${Partition}:billingconductor::\${Account}:pricingrule/\${PricingRuleId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html">customlineitem</a></td>
+                    <td>arn:\${Partition}:billingconductor::\${Account}:customlineitem/\${CustomLineItemId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Braket</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#resources">quantum-task</a></td>
+                    <td>arn:\${Partition}:braket:\${Region}:\${Account}:quantum-task/\${RandomId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#resources">job</a></td>
+                    <td>arn:\${Partition}:braket:\${Region}:\${Account}:job/\${JobName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Certificate Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscertificatemanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-acm-cert">certificate</a></td>
+                    <td>arn:\${Partition}:acm:\${Region}:\${Account}:certificate/\${CertificateId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Budget Service</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbudgetservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1349,7 +1363,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1358,26 +1372,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Certificate Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscertificatemanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-acm-cert">certificate</a></td>
-                    <td>arn:\${Partition}:acm:\${Region}:\${Account}:certificate/\${CertificateId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Chatbot</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awschatbot.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1386,12 +1386,30 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Cloud Map</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloud-map/latest/dg/API_Namespace.html">namespace</a></td>
+                    <td>arn:\${Partition}:servicediscovery:\${Region}:\${Account}:namespace/\${NamespaceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloud-map/latest/dg/API_Service.html">service</a></td>
+                    <td>arn:\${Partition}:servicediscovery:\${Region}:\${Account}:service/\${ServiceId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Clean Rooms ML</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanroomsml.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1412,21 +1430,165 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Cloud Map</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html</p>
+        <h1>Amazon Cloud Directory</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonclouddirectory.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloud-map/latest/dg/API_Namespace.html">namespace</a></td>
-                    <td>arn:\${Partition}:servicediscovery:\${Region}:\${Account}:namespace/\${NamespaceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">appliedSchema</a></td>
+                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:directory/\${DirectoryId}/schema/\${SchemaName}/\${Version}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloud-map/latest/dg/API_Service.html">service</a></td>
-                    <td>arn:\${Partition}:servicediscovery:\${Region}:\${Account}:service/\${ServiceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">developmentSchema</a></td>
+                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:schema/development/\${SchemaName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">directory</a></td>
+                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:directory/\${DirectoryId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">publishedSchema</a></td>
+                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:schema/published/\${SchemaName}/\${Version}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Cloud Control API</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudcontrolapi.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS CloudShell</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudshell/latest/userguide/sec-auth-with-identities.html#Environment">Environment</a></td>
+                    <td>arn:\${Partition}:cloudshell:\${Region}:\${Account}:environment/\${EnvironmentId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudSearch</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudsearch.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudsearch/latest/developerguide/creating-domains.html">domain</a></td>
+                    <td>arn:\${Partition}:cloudsearch:\${Region}:\${Account}:domain/\${DomainName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Cloud9</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloud9.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-environment">environment</a></td>
+                    <td>arn:\${Partition}:cloud9:\${Region}:\${Account}:environment:\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudFront KeyValueStore</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfrontkeyvaluestore.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/kvs-with-functions.html">key-value-store</a></td>
+                    <td>arn:\${Partition}:cloudfront::\${Account}:key-value-store/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CloudTrail Data</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtraildata.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-channels">channel</a></td>
+                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:channel/\${ChannelId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CloudFormation</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-concepts.html#w2ab1b5c15c11">changeset</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:changeSet/\${ChangeSetName}/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-concepts.html#w2ab1b5c15b9">stack</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stack/\${StackName}/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stacksets-concepts-stackset">stackset</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stackset/\${StackSetName}:\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">stackset-target</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stackset-target/\${StackSetTarget}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">type</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:type/resource/\${Type}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/generate-IaC.html">generatedtemplate</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:generatedTemplate/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/generate-IaC.html">resourcescan</a></td>
+                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:resourceScan/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CloudHSM</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudhsm.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/backups.html">backup</a></td>
+                    <td>arn:\${Partition}:cloudhsm:\${Region}:\${Account}:backup/\${CloudHsmBackupInstanceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/clusters.html">cluster</a></td>
+                    <td>arn:\${Partition}:cloudhsm:\${Region}:\${Account}:cluster/\${CloudHsmClusterInstanceName}</td>
                 </tr>
             </tbody>
         </table>
@@ -1435,7 +1597,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1468,94 +1630,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Cloud Control API</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudcontrolapi.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon CloudFront KeyValueStore</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfrontkeyvaluestore.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/kvs-with-functions.html">key-value-store</a></td>
-                    <td>arn:\${Partition}:cloudfront::\${Account}:key-value-store/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Cloud Directory</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonclouddirectory.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">appliedSchema</a></td>
-                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:directory/\${DirectoryId}/schema/\${SchemaName}/\${Version}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">developmentSchema</a></td>
-                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:schema/development/\${SchemaName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">directory</a></td>
-                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:directory/\${DirectoryId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#whatisdirectory">publishedSchema</a></td>
-                    <td>arn:\${Partition}:clouddirectory:\${Region}:\${Account}:schema/published/\${SchemaName}/\${Version}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CloudHSM</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudhsm.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/backups.html">backup</a></td>
-                    <td>arn:\${Partition}:cloudhsm:\${Region}:\${Account}:backup/\${CloudHsmBackupInstanceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/clusters.html">cluster</a></td>
-                    <td>arn:\${Partition}:cloudhsm:\${Region}:\${Account}:cluster/\${CloudHsmClusterInstanceName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CloudTrail Data</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtraildata.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-channels">channel</a></td>
-                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:channel/\${ChannelId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon CloudFront</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfront.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1612,40 +1692,332 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Cloud9</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloud9.html</p>
+        <h1>AWS CloudTrail</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtrail.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-environment">environment</a></td>
-                    <td>arn:\${Partition}:cloud9:\${Region}:\${Account}:environment:\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-trails">trail</a></td>
+                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:trail/\${TrailName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-lake">eventdatastore</a></td>
+                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:eventdatastore/\${EventDataStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-channels">channel</a></td>
+                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:channel/\${ChannelId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon CloudSearch</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudsearch.html</p>
+        <h1>Amazon CloudWatch</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudsearch/latest/developerguide/creating-domains.html">domain</a></td>
-                    <td>arn:\${Partition}:cloudsearch:\${Region}:\${Account}:domain/\${DomainName}</td>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">alarm</a></td>
+                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:alarm:\${AlarmName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">dashboard</a></td>
+                    <td>arn:\${Partition}:cloudwatch::\${Account}:dashboard/\${DashboardName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">insight-rule</a></td>
+                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:insight-rule/\${InsightRuleName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">metric-stream</a></td>
+                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:metric-stream/\${MetricStreamName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">slo</a></td>
+                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:slo/\${SloName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">service</a></td>
+                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:service/\${ServiceName}-\${UniqueAttributesHex}</td>
                 </tr>
             </tbody>
+        </table>
+        <h1>Amazon CloudWatch Observability Access Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityaccessmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">Link</a></td>
+                    <td>arn:\${Partition}:oam:\${Region}:\${Account}:link/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">Sink</a></td>
+                    <td>arn:\${Partition}:oam:\${Region}:\${Account}:sink/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CloudWatch RUM</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudwatchrum.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/API_AppMonitor.html">AppMonitorResource</a></td>
+                    <td>arn:\${Partition}:rum:\${Region}:\${Account}:appmonitor/\${Name}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudWatch Internet Monitor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchinternetmonitor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">HealthEvent</a></td>
+                    <td>arn:\${Partition}:internetmonitor:\${Region}:\${Account}:monitor/\${MonitorName}/health-event/\${EventId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">Monitor</a></td>
+                    <td>arn:\${Partition}:internetmonitor:\${Region}:\${Account}:monitor/\${MonitorName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">InternetEvent</a></td>
+                    <td>arn:\${Partition}:internetmonitor::\${Account}:internet-event/\${InternetEventId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudWatch Evidently</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchevidently.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Project.html">Project</a></td>
+                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Feature.html">Feature</a></td>
+                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/feature/\${FeatureName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Experiment.html">Experiment</a></td>
+                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/experiment/\${ExperimentName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Launch.html">Launch</a></td>
+                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/launch/\${LaunchName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Segment.html">Segment</a></td>
+                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:segment/\${SegmentName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CodeArtifact</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeartifact.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/domains.html">domain</a></td>
+                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:domain/\${DomainName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/repos.html">repository</a></td>
+                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:repository/\${DomainName}/\${RepositoryName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/package-groups.html">package-group</a></td>
+                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:package-group/\${DomainName}\${EncodedPackageGroupPattern}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages.html">package</a></td>
+                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:package/\${DomainName}/\${RepositoryName}/\${PackageFormat}/\${PackageNamespace}/\${PackageName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudWatch Network Monitor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchnetworkmonitor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html">monitor</a></td>
+                    <td>arn:\${Partition}:networkmonitor:\${Region}:\${Account}:monitor/\${MonitorName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html">probe</a></td>
+                    <td>arn:\${Partition}:networkmonitor:\${Region}:\${Account}:probe/\${ProbeId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudWatch Application Insights</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationinsights.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon CloudWatch Logs</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchlogs.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogGroup.html">log-group</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:log-group:\${LogGroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogStream.html">log-stream</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:log-group:\${LogGroupName}:log-stream:\${LogStreamName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Destination.html">destination</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:destination:\${DestinationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliverySource.html">delivery-source</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery-source:\${DeliverySourceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Delivery.html">delivery</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery:\${DeliveryName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliveryDestination.html">delivery-destination</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery-destination:\${DeliveryDestinationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_AnomalyDetector.html">anomaly-detector</a></td>
+                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:anomaly-detector:\${DetectorId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CloudWatch Synthetics</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchsynthetics.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html">canary</a></td>
+                    <td>arn:\${Partition}:synthetics:\${Region}:\${Account}:canary:\${CanaryName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Groups.html">group</a></td>
+                    <td>arn:\${Partition}:synthetics:\${Region}:\${Account}:group:\${GroupId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CodeDeploy</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploy.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">application</a></td>
+                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:application:\${ApplicationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">deploymentconfig</a></td>
+                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:deploymentconfig:\${DeploymentConfigurationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">deploymentgroup</a></td>
+                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:deploymentgroup:\${ApplicationName}/\${DeploymentGroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">instance</a></td>
+                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:instance:\${InstanceName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CodeBuild</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodebuild.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">build</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:build/\${BuildId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">build-batch</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:build-batch/\${BuildBatchId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">project</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:project/\${ProjectName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">report-group</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:report-group/\${ReportGroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">report</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:report/\${ReportGroupName}:\${ReportId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">fleet</a></td>
+                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:fleet/\${FleetName}:\${FleetId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CodeDeploy secure host commands service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploysecurehostcommandsservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
         </table>
         <h1>Amazon Chime</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonchime.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1702,267 +2074,95 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS CloudFormation</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html</p>
+        <h1>Amazon CodeGuru Profiler</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguruprofiler.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-concepts.html#w2ab1b5c15c11">changeset</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:changeSet/\${ChangeSetName}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-concepts.html#w2ab1b5c15b9">stack</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stack/\${StackName}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stacksets-concepts-stackset">stackset</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stackset/\${StackSetName}:\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">stackset-target</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:stackset-target/\${StackSetTarget}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">type</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:type/resource/\${Type}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/generate-IaC.html">generatedtemplate</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:generatedTemplate/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/generate-IaC.html">resourcescan</a></td>
-                    <td>arn:\${Partition}:cloudformation:\${Region}:\${Account}:resourceScan/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/profiler-ug/working-with-profiling-groups.html">ProfilingGroup</a></td>
+                    <td>arn:\${Partition}:codeguru-profiler:\${Region}:\${Account}:profilingGroup/\${ProfilingGroupName}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS CloudShell</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html</p>
+        <h1>AWS CodeCommit</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudshell/latest/userguide/sec-auth-with-identities.html#Environment">Environment</a></td>
-                    <td>arn:\${Partition}:cloudshell:\${Region}:\${Account}:environment/\${EnvironmentId}</td>
+                    <td><a href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control.html#arn-formats">repository</a></td>
+                    <td>arn:\${Partition}:codecommit:\${Region}:\${Account}:\${RepositoryName}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon CloudWatch Application Insights</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationinsights.html</p>
+        <h1>AWS CodeConnections</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeconnections.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/connections.html">Connection</a></td>
+                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:connection/\${ConnectionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-hosts.html">Host</a></td>
+                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:host/\${HostId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/repositorylinks.html">RepositoryLink</a></td>
+                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:repository-link/\${RepositoryLinkId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CodeGuru Reviewer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurureviewer.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-repositories.html">association</a></td>
+                    <td>arn:\${Partition}:codeguru-reviewer:\${Region}:\${Account}:association:\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-reviews.html">codereview</a></td>
+                    <td>arn:\${Partition}:codeguru-reviewer:\${Region}:\${Account}:association:\${ResourceId}:codereview:\${CodeReviewId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon CodeGuru</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguru.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
         </table>
-        <h1>Amazon CloudWatch</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html</p>
+        <h1>Amazon CodeGuru Security</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">alarm</a></td>
-                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:alarm:\${AlarmName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">dashboard</a></td>
-                    <td>arn:\${Partition}:cloudwatch::\${Account}:dashboard/\${DashboardName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">insight-rule</a></td>
-                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:insight-rule/\${InsightRuleName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">metric-stream</a></td>
-                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:metric-stream/\${MetricStreamName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">slo</a></td>
-                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:slo/\${SloName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">service</a></td>
-                    <td>arn:\${Partition}:cloudwatch:\${Region}:\${Account}:service/\${ServiceName}-\${UniqueAttributesHex}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CloudTrail</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtrail.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-trails">trail</a></td>
-                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:trail/\${TrailName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-lake">eventdatastore</a></td>
-                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:eventdatastore/\${EventDataStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html#how-cloudtrail-works-channels">channel</a></td>
-                    <td>arn:\${Partition}:cloudtrail:\${Region}:\${Account}:channel/\${ChannelId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CloudWatch Evidently</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchevidently.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Project.html">Project</a></td>
-                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Feature.html">Feature</a></td>
-                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/feature/\${FeatureName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Experiment.html">Experiment</a></td>
-                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/experiment/\${ExperimentName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Launch.html">Launch</a></td>
-                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:project/\${ProjectName}/launch/\${LaunchName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_Segment.html">Segment</a></td>
-                    <td>arn:\${Partition}:evidently:\${Region}:\${Account}:segment/\${SegmentName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CloudWatch Network Monitor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchnetworkmonitor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html">monitor</a></td>
-                    <td>arn:\${Partition}:networkmonitor:\${Region}:\${Account}:monitor/\${MonitorName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html">probe</a></td>
-                    <td>arn:\${Partition}:networkmonitor:\${Region}:\${Account}:probe/\${ProbeId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CloudWatch Observability Access Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityaccessmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">Link</a></td>
-                    <td>arn:\${Partition}:oam:\${Region}:\${Account}:link/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">Sink</a></td>
-                    <td>arn:\${Partition}:oam:\${Region}:\${Account}:sink/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CloudWatch Internet Monitor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchinternetmonitor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">HealthEvent</a></td>
-                    <td>arn:\${Partition}:internetmonitor:\${Region}:\${Account}:monitor/\${MonitorName}/health-event/\${EventId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">Monitor</a></td>
-                    <td>arn:\${Partition}:internetmonitor:\${Region}:\${Account}:monitor/\${MonitorName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-components.html">InternetEvent</a></td>
-                    <td>arn:\${Partition}:internetmonitor::\${Account}:internet-event/\${InternetEventId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CloudWatch Synthetics</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchsynthetics.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html">canary</a></td>
-                    <td>arn:\${Partition}:synthetics:\${Region}:\${Account}:canary:\${CanaryName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Groups.html">group</a></td>
-                    <td>arn:\${Partition}:synthetics:\${Region}:\${Account}:group:\${GroupId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CloudWatch RUM</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudwatchrum.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/API_AppMonitor.html">AppMonitorResource</a></td>
-                    <td>arn:\${Partition}:rum:\${Region}:\${Account}:appmonitor/\${Name}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeDeploy</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploy.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">application</a></td>
-                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:application:\${ApplicationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">deploymentconfig</a></td>
-                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:deploymentconfig:\${DeploymentConfigurationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">deploymentgroup</a></td>
-                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:deploymentgroup:\${ApplicationName}/\${DeploymentGroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/auth-and-access-control-permissions-reference.html">instance</a></td>
-                    <td>arn:\${Partition}:codedeploy:\${Region}:\${Account}:instance:\${InstanceName}</td>
+                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/security-ug/working-with-code-scans.html">ScanName</a></td>
+                    <td>arn:\${Partition}:codeguru-security:\${Region}:\${Account}:scans/\${ScanName}</td>
                 </tr>
             </tbody>
         </table>
@@ -1971,7 +2171,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -1992,155 +2192,21 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS CodeArtifact</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeartifact.html</p>
+        <h1>AWS CodeStar</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestar.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/domains.html">domain</a></td>
-                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:domain/\${DomainName}</td>
+                    <td><a href="https://docs.aws.amazon.com/codestar/latest/userguide/working-with-projects.html">project</a></td>
+                    <td>arn:\${Partition}:codestar:\${Region}:\${Account}:project/\${ProjectId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/repos.html">repository</a></td>
-                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:repository/\${DomainName}/\${RepositoryName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/package-groups.html">package-group</a></td>
-                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:package-group/\${DomainName}\${EncodedPackageGroupPattern}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages.html">package</a></td>
-                    <td>arn:\${Partition}:codeartifact:\${Region}:\${Account}:package/\${DomainName}/\${RepositoryName}/\${PackageFormat}/\${PackageNamespace}/\${PackageName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CodeGuru</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguru.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon CloudWatch Logs</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchlogs.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogGroup.html">log-group</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:log-group:\${LogGroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogStream.html">log-stream</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:log-group:\${LogGroupName}:log-stream:\${LogStreamName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Destination.html">destination</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:destination:\${DestinationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliverySource.html">delivery-source</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery-source:\${DeliverySourceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Delivery.html">delivery</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery:\${DeliveryName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliveryDestination.html">delivery-destination</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:delivery-destination:\${DeliveryDestinationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_AnomalyDetector.html">anomaly-detector</a></td>
-                    <td>arn:\${Partition}:logs:\${Region}:\${Account}:anomaly-detector:\${DetectorId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeCommit</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control.html#arn-formats">repository</a></td>
-                    <td>arn:\${Partition}:codecommit:\${Region}:\${Account}:\${RepositoryName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeConnections</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeconnections.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/connections.html">Connection</a></td>
-                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:connection/\${ConnectionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-hosts.html">Host</a></td>
-                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:host/\${HostId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/dtconsole/latest/userguide/repositorylinks.html">RepositoryLink</a></td>
-                    <td>arn:\${Partition}:codeconnections:\${Region}:\${Account}:repository-link/\${RepositoryLinkId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeDeploy secure host commands service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploysecurehostcommandsservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon CodeGuru Security</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/security-ug/working-with-code-scans.html">ScanName</a></td>
-                    <td>arn:\${Partition}:codeguru-security:\${Region}:\${Account}:scans/\${ScanName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CodeGuru Reviewer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurureviewer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-repositories.html">association</a></td>
-                    <td>arn:\${Partition}:codeguru-reviewer:\${Region}:\${Account}:association:\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-reviews.html">codereview</a></td>
-                    <td>arn:\${Partition}:codeguru-reviewer:\${Region}:\${Account}:association:\${ResourceId}:codereview:\${CodeReviewId}</td>
+                    <td><a href="https://docs.aws.amazon.com/codestar/latest/userguide/working-with-user-info.html">user</a></td>
+                    <td>arn:\${Partition}:iam::\${Account}:user/\${AwsUserName}</td>
                 </tr>
             </tbody>
         </table>
@@ -2149,7 +2215,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2174,146 +2240,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS CodeStar Notifications</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarnotifications.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codestar-notifications/latest/userguide/security_iam_service-with-iam.html">notificationrule</a></td>
-                    <td>arn:\${Partition}:codestar-notifications:\${Region}:\${Account}:notificationrule/\${NotificationRuleId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CodeWhisperer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodewhisperer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codewhisperer/latest/userguide/as-whisper-admin.html#about-profiles">profile</a></td>
-                    <td>arn:\${Partition}:codewhisperer::\${Account}:profile/\${Identifier}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codewhisperer/latest/userguide/as-whisper-admin.html#about-customizations">customization</a></td>
-                    <td>arn:\${Partition}:codewhisperer::\${Account}:customization/\${Identifier}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeBuild</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodebuild.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">build</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:build/\${BuildId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">build-batch</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:build-batch/\${BuildBatchId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">project</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:project/\${ProjectName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">report-group</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:report-group/\${ReportGroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">report</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:report/\${ReportGroupName}:\${ReportId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">fleet</a></td>
-                    <td>arn:\${Partition}:codebuild:\${Region}:\${Account}:fleet/\${FleetName}:\${FleetId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS CodeStar</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestar.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codestar/latest/userguide/working-with-projects.html">project</a></td>
-                    <td>arn:\${Partition}:codestar:\${Region}:\${Account}:project/\${ProjectId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/codestar/latest/userguide/working-with-user-info.html">user</a></td>
-                    <td>arn:\${Partition}:iam::\${Account}:user/\${AwsUserName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon CodeGuru Profiler</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguruprofiler.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/codeguru/latest/profiler-ug/working-with-profiling-groups.html">ProfilingGroup</a></td>
-                    <td>arn:\${Partition}:codeguru-profiler:\${Region}:\${Account}:profilingGroup/\${ProfilingGroupName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Cognito Sync</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitosync.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/synchronizing-data.html#understanding-datasets">dataset</a></td>
-                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}/identity/\${IdentityId}/dataset/\${DatasetName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html#authenticated-and-unauthenticated-identities">identity</a></td>
-                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}/identity/\${IdentityId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html">identitypool</a></td>
-                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Cognito Identity</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitoidentity.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html">identitypool</a></td>
-                    <td>arn:\${Partition}:cognito-identity:\${Region}:\${Account}:identitypool/\${IdentityPoolId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS CodeStar Connections</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarconnections.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2330,40 +2262,138 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Cognito User Pools</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html</p>
+        <h1>Amazon CodeWhisperer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodewhisperer.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">userpool</a></td>
-                    <td>arn:\${Partition}:cognito-idp:\${Region}:\${Account}:userpool/\${UserPoolId}</td>
+                    <td><a href="https://docs.aws.amazon.com/codewhisperer/latest/userguide/as-whisper-admin.html#about-profiles">profile</a></td>
+                    <td>arn:\${Partition}:codewhisperer::\${Account}:profile/\${Identifier}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html">webacl</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/webacl/\${Name}/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/codewhisperer/latest/userguide/as-whisper-admin.html#about-customizations">customization</a></td>
+                    <td>arn:\${Partition}:codewhisperer::\${Account}:customization/\${Identifier}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Comprehend Medical</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehendmedical.html</p>
+        <h1>Amazon Cognito Identity</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitoidentity.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html">identitypool</a></td>
+                    <td>arn:\${Partition}:cognito-identity:\${Region}:\${Account}:identitypool/\${IdentityPoolId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS CodeStar Notifications</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarnotifications.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/codestar-notifications/latest/userguide/security_iam_service-with-iam.html">notificationrule</a></td>
+                    <td>arn:\${Partition}:codestar-notifications:\${Region}:\${Account}:notificationrule/\${NotificationRuleId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Compute Optimizer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscomputeoptimizer.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
+        </table>
+        <h1>Amazon Cognito Sync</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitosync.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/synchronizing-data.html#understanding-datasets">dataset</a></td>
+                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}/identity/\${IdentityId}/dataset/\${DatasetName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html#authenticated-and-unauthenticated-identities">identity</a></td>
+                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}/identity/\${IdentityId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html">identitypool</a></td>
+                    <td>arn:\${Partition}:cognito-sync:\${Region}:\${Account}:identitypool/\${IdentityPoolId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Connect Cases</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Case</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/case/\${CaseId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Domain</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-fields.html">Field</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/field/\${FieldId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-layouts.html">Layout</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/layout/\${LayoutId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/associatecontactandcase.html">RelatedItem</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/case/\${CaseId}/related-item/\${RelatedItemId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-templates.html">Template</a></td>
+                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/template/\${TemplateId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Connect Voice ID</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectvoiceid.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-voiceid.html#voiceid-domain">domain</a></td>
+                    <td>arn:\${Partition}:voiceid:\${Region}:\${Account}:domain/\${DomainId}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon Comprehend</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehend.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2428,12 +2458,52 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Compute Optimizer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscomputeoptimizer.html</p>
+        <h1>Amazon Connect Customer Profiles</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">domains</a></td>
+                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">object-types</a></td>
+                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/object-types/\${ObjectTypeName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">integrations</a></td>
+                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/integrations/\${Uri}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">event-streams</a></td>
+                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/event-streams/\${EventStreamName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">calculated-attributes</a></td>
+                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/calculated-attributes/\${CalculatedAttributeName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Comprehend Medical</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehendmedical.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Connector Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconnectorservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -2443,7 +2513,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2480,60 +2550,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Consolidated Billing</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolidatedbilling.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Connector Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconnectorservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Cost and Usage Report</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostandusagereport.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html">cur</a></td>
-                    <td>arn:\${Partition}:cur:\${Region}:\${Account}:definition/\${ReportName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Connect Voice ID</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectvoiceid.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-voiceid.html#voiceid-domain">domain</a></td>
-                    <td>arn:\${Partition}:voiceid:\${Region}:\${Account}:domain/\${DomainId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Management Console Mobile App</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolemobileapp.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2542,12 +2564,30 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Cognito User Pools</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">userpool</a></td>
+                    <td>arn:\${Partition}:cognito-idp:\${Region}:\${Account}:userpool/\${UserPoolId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html">webacl</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/webacl/\${Name}/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Control Catalog</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontrolcatalog.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2564,76 +2604,46 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Connect Customer Profiles</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html</p>
+        <h1>AWS Consolidated Billing</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolidatedbilling.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Cost and Usage Report</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostandusagereport.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">domains</a></td>
-                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">object-types</a></td>
-                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/object-types/\${ObjectTypeName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">integrations</a></td>
-                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/integrations/\${Uri}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">event-streams</a></td>
-                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/event-streams/\${EventStreamName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/">calculated-attributes</a></td>
-                    <td>arn:\${Partition}:profile:\${Region}:\${Account}:domains/\${DomainName}/calculated-attributes/\${CalculatedAttributeName}</td>
+                    <td><a href="https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html">cur</a></td>
+                    <td>arn:\${Partition}:cur:\${Region}:\${Account}:definition/\${ReportName}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Connect Cases</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html</p>
+        <h1>AWS Cost Optimization Hub</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostoptimizationhub.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Case</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/case/\${CaseId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Domain</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-fields.html">Field</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/field/\${FieldId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-layouts.html">Layout</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/layout/\${LayoutId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/associatecontactandcase.html">RelatedItem</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/case/\${CaseId}/related-item/\${RelatedItemId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/connect/latest/adminguide/case-templates.html">Template</a></td>
-                    <td>arn:\${Partition}:cases:\${Region}:\${Account}:domain/\${DomainId}/template/\${TemplateId}</td>
-                </tr>
-            </tbody>
+        </tbody>
         </table>
         <h1>AWS Control Tower</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2659,73 +2669,31 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
         </table>
-        <h1>AWS Data Pipeline</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html</p>
+        <h1>Amazon Data Lifecycle Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatalifecyclemanager.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html">pipeline</a></td>
-                    <td>arn:\${Partition}:datapipeline:\${Region}:\${Account}:pipeline/\${PipelineId}</td>
+                    <td><a href="https://docs.aws.amazon.com/dlm/latest/APIReference/API_LifecyclePolicy.html">policy</a></td>
+                    <td>arn:\${Partition}:dlm:\${Region}:\${Account}:policy/\${ResourceName}</td>
                 </tr>
             </tbody>
-        </table>
-        <h1>AWS Cost Explorer Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalySubscription.html">anomalysubscription</a></td>
-                    <td>arn:\${Partition}:ce::\${Account}:anomalysubscription/\${Identifier}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalyMonitor.html">anomalymonitor</a></td>
-                    <td>arn:\${Partition}:ce::\${Account}:anomalymonitor/\${Identifier}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">costcategory</a></td>
-                    <td>arn:\${Partition}:ce::\${Account}:costcategory/\${Identifier}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Cost Optimization Hub</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostoptimizationhub.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Database Query Metadata Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
         </table>
         <h1>AWS Data Exchange</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdataexchange.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2762,12 +2730,58 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Cost Explorer Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalySubscription.html">anomalysubscription</a></td>
+                    <td>arn:\${Partition}:ce::\${Account}:anomalysubscription/\${Identifier}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalyMonitor.html">anomalymonitor</a></td>
+                    <td>arn:\${Partition}:ce::\${Account}:anomalymonitor/\${Identifier}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">costcategory</a></td>
+                    <td>arn:\${Partition}:ce::\${Account}:costcategory/\${Identifier}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Data Pipeline</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html">pipeline</a></td>
+                    <td>arn:\${Partition}:datapipeline:\${Region}:\${Account}:pipeline/\${PipelineId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Database Query Metadata Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS DeepLens</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeeplens.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2784,148 +2798,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Data Lifecycle Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatalifecyclemanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/dlm/latest/APIReference/API_LifecyclePolicy.html">policy</a></td>
-                    <td>arn:\${Partition}:dlm:\${Region}:\${Account}:policy/\${ResourceName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS DeepComposer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepcomposer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-custom-model.html">model</a></td>
-                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:model/\${ModelId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html">composition</a></td>
-                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:composition/\${CompositionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html">audio</a></td>
-                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:audio/\${AudioId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon DevOps Guru</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondevopsguru.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/setting-up.html#setting-up-notifications">topic</a></td>
-                    <td>arn:\${Partition}:sns:\${Region}:\${Account}:\${TopicName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS DataSync</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatasync.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-agents.html">agent</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:agent/\${AgentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html">location</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:location/\${LocationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-tasks.html">task</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:task/\${TaskId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html">taskexecution</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:task/\${TaskId}/execution/\${ExecutionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-configure-storage.html">storagesystem</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:system/\${StorageSystemId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-create.html">discoveryjob</a></td>
-                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:system/\${StorageSystemId}/job/\${DiscoveryJobId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS DeepRacer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-choose-race-type.html">car</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:car/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-test-in-simulator.html">evaluation_job</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:evaluation_job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-submit-model-to-leaderboard.html">leaderboard</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}::leaderboard/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-submit-model-to-leaderboard.html">leaderboard_evaluation_job</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:leaderboard_evaluation_job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-training-model.html">reinforcement_learning_model</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:model/reinforcement_learning/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-console-train-evaluate-models.html">track</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}::track/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-training-model.html">training_job</a></td>
-                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:training_job/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon DataZone</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/datazone/latest/userguide/create-domain.html">domain</a></td>
-                    <td>arn:\${Partition}:datazone:\${Region}:\${Account}:domain/\${DomainId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Deadline Cloud</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeadlinecloud.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -2966,12 +2844,114 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Detective</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondetective.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/detective/latest/adminguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">Graph</a></td>
+                    <td>arn:\${Partition}:detective:\${Region}:\${Account}:graph:\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon DataZone</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/datazone/latest/userguide/create-domain.html">domain</a></td>
+                    <td>arn:\${Partition}:datazone:\${Region}:\${Account}:domain/\${DomainId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS DataSync</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatasync.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-agents.html">agent</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:agent/\${AgentId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html">location</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:location/\${LocationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-tasks.html">task</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:task/\${TaskId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html">taskexecution</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:task/\${TaskId}/execution/\${ExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-configure-storage.html">storagesystem</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:system/\${StorageSystemId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-create.html">discoveryjob</a></td>
+                    <td>arn:\${Partition}:datasync:\${Region}:\${AccountId}:system/\${StorageSystemId}/job/\${DiscoveryJobId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Diagnostic tools</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdiagnostictools.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Execution.html">execution</a></td>
+                    <td>arn:\${Partition}:ts::\${Account}:execution/\${UserId}/\${ToolId}/\${ExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Tool.html">tool</a></td>
+                    <td>arn:\${Partition}:ts::aws:tool/\${ToolId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS DeepComposer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepcomposer.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-custom-model.html">model</a></td>
+                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:model/\${ModelId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html">composition</a></td>
+                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:composition/\${CompositionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html">audio</a></td>
+                    <td>arn:\${Partition}:deepcomposer:\${Region}:\${Account}:audio/\${AudioId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Database Migration Service</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3028,35 +3008,95 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Detective</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondetective.html</p>
+        <h1>AWS DeepRacer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/detective/latest/adminguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">Graph</a></td>
-                    <td>arn:\${Partition}:detective:\${Region}:\${Account}:graph:\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-choose-race-type.html">car</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:car/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-test-in-simulator.html">evaluation_job</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:evaluation_job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-submit-model-to-leaderboard.html">leaderboard</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}::leaderboard/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-submit-model-to-leaderboard.html">leaderboard_evaluation_job</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:leaderboard_evaluation_job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-training-model.html">reinforcement_learning_model</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:model/reinforcement_learning/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-console-train-evaluate-models.html">track</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}::track/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-training-model.html">training_job</a></td>
+                    <td>arn:\${Partition}:deepracer:\${Region}:\${Account}:training_job/\${ResourceId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Diagnostic tools</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdiagnostictools.html</p>
+        <h1>Amazon DevOps Guru</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondevopsguru.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Execution.html">execution</a></td>
-                    <td>arn:\${Partition}:ts::\${Account}:execution/\${UserId}/\${ToolId}/\${ExecutionId}</td>
+                    <td><a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/setting-up.html#setting-up-notifications">topic</a></td>
+                    <td>arn:\${Partition}:sns:\${Region}:\${Account}:\${TopicName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Direct Connect</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectconnect.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">dxcon</a></td>
+                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxcon/\${ConnectionId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Tool.html">tool</a></td>
-                    <td>arn:\${Partition}:ts::aws:tool/\${ToolId}</td>
+                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Lag.html">dxlag</a></td>
+                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxlag/\${LagId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html">dxvif</a></td>
+                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxvif/\${VirtualInterfaceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html">dx-gateway</a></td>
+                    <td>arn:\${Partition}:directconnect::\${Account}:dx-gateway/\${DirectConnectGatewayId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Directory Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/devguide/welcome.html">directory</a></td>
+                    <td>arn:\${Partition}:ds:\${Region}:\${Account}:directory/\${DirectoryId}</td>
                 </tr>
             </tbody>
         </table>
@@ -3065,7 +3105,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3206,52 +3246,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Directory Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/directoryservice/latest/devguide/welcome.html">directory</a></td>
-                    <td>arn:\${Partition}:ds:\${Region}:\${Account}:directory/\${DirectoryId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Direct Connect</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectconnect.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">dxcon</a></td>
-                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxcon/\${ConnectionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Lag.html">dxlag</a></td>
-                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxlag/\${LagId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html">dxvif</a></td>
-                    <td>arn:\${Partition}:directconnect:\${Region}:\${Account}:dxvif/\${VirtualInterfaceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html">dx-gateway</a></td>
-                    <td>arn:\${Partition}:directconnect::\${Account}:dx-gateway/\${DirectConnectGatewayId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon DocumentDB Elastic Clusters</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondocumentdbelasticclusters.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3264,58 +3264,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Elastic Block Store</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticblockstore.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">snapshot</a></td>
-                    <td>arn:\${Partition}:ec2:\${Region}::snapshot/\${SnapshotId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon EKS Auth</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneksauth.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">cluster</a></td>
-                    <td>arn:\${Partition}:eks:\${Region}:\${Account}:cluster/\${ClusterName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon EC2 Instance Connect</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2instanceconnect.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#EC2_ARN_Format">instance</a></td>
-                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance/\${InstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html#iam-CreateInstanceConnectEndpoint">instance-connect-endpoint</a></td>
-                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance-connect-endpoint/\${InstanceConnectEndpointId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Device Farm</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevicefarm.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3393,7 +3347,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3426,17 +3380,35 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon DynamoDB Accelerator (DAX)</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodbacceleratordax.html</p>
+        <h1>Amazon EKS Auth</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneksauth.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.access-control.html">application</a></td>
-                    <td>arn:\${Partition}:dax:\${Region}:\${Account}:cache/\${ClusterName}</td>
+                    <td><a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">cluster</a></td>
+                    <td>arn:\${Partition}:eks:\${Region}:\${Account}:cluster/\${ClusterName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon EC2 Instance Connect</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2instanceconnect.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#EC2_ARN_Format">instance</a></td>
+                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html#iam-CreateInstanceConnectEndpoint">instance-connect-endpoint</a></td>
+                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance-connect-endpoint/\${InstanceConnectEndpointId}</td>
                 </tr>
             </tbody>
         </table>
@@ -3445,7 +3417,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3458,21 +3430,117 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Elastic Container Registry Public</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistrypublic.html</p>
+        <h1>Amazon Elastic Container Registry</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistry.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format">repository</a></td>
-                    <td>arn:\${Partition}:ecr-public::\${Account}:repository/\${RepositoryName}</td>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">repository</a></td>
+                    <td>arn:\${Partition}:ecr:\${Region}:\${Account}:repository/\${RepositoryName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Elastic Beanstalk</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticbeanstalk.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">application</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:application/\${ApplicationName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format">registry</a></td>
-                    <td>arn:\${Partition}:ecr-public::\${Account}:registry/\${RegistryId}</td>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">applicationversion</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:applicationversion/\${ApplicationName}/\${VersionLabel}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">configurationtemplate</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:configurationtemplate/\${ApplicationName}/\${TemplateName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">environment</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:environment/\${ApplicationName}/\${EnvironmentName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">solutionstack</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}::solutionstack/\${SolutionStackName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">platform</a></td>
+                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}::platform/\${PlatformNameWithVersion}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Elastic Block Store</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticblockstore.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">snapshot</a></td>
+                    <td>arn:\${Partition}:ec2:\${Region}::snapshot/\${SnapshotId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon DynamoDB Accelerator (DAX)</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodbacceleratordax.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.access-control.html">application</a></td>
+                    <td>arn:\${Partition}:dax:\${Region}:\${Account}:cache/\${ClusterName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Elastic Container Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html">cluster</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:cluster/\${ClusterName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/manage-capacity.html">container-instance</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:container-instance/\${ClusterName}/\${ContainerInstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">service</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:service/\${ClusterName}/\${ServiceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">task</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task/\${ClusterName}/\${TaskId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html">task-definition</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task-definition/\${TaskDefinitionFamilyName}:\${TaskDefinitionRevisionNumber}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html">capacity-provider</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:capacity-provider/\${CapacityProviderName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-external.html">task-set</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task-set/\${ClusterName}/\${ServiceName}/\${TaskSetId}</td>
                 </tr>
             </tbody>
         </table>
@@ -3481,7 +3549,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3550,37 +3618,35 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Elastic Beanstalk</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticbeanstalk.html</p>
+        <h1>AWS Elastic Load Balancing</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancing.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">application</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:application/\${ApplicationName}</td>
+                    <td><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html">loadbalancer</a></td>
+                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/\${LoadBalancerName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Elastic Container Registry Public</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistrypublic.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format">repository</a></td>
+                    <td>arn:\${Partition}:ecr-public::\${Account}:repository/\${RepositoryName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">applicationversion</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:applicationversion/\${ApplicationName}/\${VersionLabel}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">configurationtemplate</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:configurationtemplate/\${ApplicationName}/\${TemplateName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">environment</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}:\${Account}:environment/\${ApplicationName}/\${EnvironmentName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">solutionstack</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}::solutionstack/\${SolutionStackName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.arn.html">platform</a></td>
-                    <td>arn:\${Partition}:elasticbeanstalk:\${Region}::platform/\${PlatformNameWithVersion}</td>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format">registry</a></td>
+                    <td>arn:\${Partition}:ecr-public::\${Account}:registry/\${RegistryId}</td>
                 </tr>
             </tbody>
         </table>
@@ -3589,7 +3655,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3598,26 +3664,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Elastic Container Registry</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistry.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">repository</a></td>
-                    <td>arn:\${Partition}:ecr:\${Region}:\${Account}:repository/\${RepositoryName}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Elastic File System</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticfilesystem.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3630,12 +3682,26 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Elemental Appliances and Software</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftware.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/elemental-appliances-software">quote</a></td>
+                    <td>arn:\${Partition}:elemental-appliances-software:\${Region}:\${Account}:quote/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon Elastic Kubernetes Service</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3676,196 +3742,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Elastic Transcoder</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastictranscoder.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-jobs.html">job</a></td>
-                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:job/\${JobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-pipelines.html">pipeline</a></td>
-                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:pipeline/\${PipelineId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-presets.html">preset</a></td>
-                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:preset/\${PresetId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Elastic Container Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html">cluster</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:cluster/\${ClusterName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/manage-capacity.html">container-instance</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:container-instance/\${ClusterName}/\${ContainerInstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">service</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:service/\${ClusterName}/\${ServiceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">task</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task/\${ClusterName}/\${TaskId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html">task-definition</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task-definition/\${TaskDefinitionFamilyName}:\${TaskDefinitionRevisionNumber}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html">capacity-provider</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:capacity-provider/\${CapacityProviderName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-external.html">task-set</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task-set/\${ClusterName}/\${ServiceName}/\${TaskSetId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elastic Load Balancing</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancing.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html">loadbalancer</a></td>
-                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/\${LoadBalancerName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elastic Disaster Recovery</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticdisasterrecovery.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/failback-overview.html">JobResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:job/\${JobID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/recovery-instances.html">RecoveryInstanceResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:recovery-instance/\${RecoveryInstanceID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/replication-settings-template.html">ReplicationConfigurationTemplateResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:replication-configuration-template/\${ReplicationConfigurationTemplateID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/default-drs-launch-settings.html">LaunchConfigurationTemplateResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:launch-configuration-template/\${LaunchConfigurationTemplateID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/source-servers.html">SourceServerResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:source-server/\${SourceServerID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/source-networks.html">SourceNetworkResource</a></td>
-                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:source-network/\${SourceNetworkID}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elemental Appliances and Software Activation Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftwareactivationservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/elemental-appliances-software/">activation</a></td>
-                    <td>arn:\${Partition}:elemental-activations:\${Region}:\${Account}:activation/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Elastic MapReduce</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticmapreduce.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview.html">cluster</a></td>
-                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:cluster/\${ClusterId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html">editor</a></td>
-                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:editor/\${EditorId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-headless.html">notebook-execution</a></td>
-                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:notebook-execution/\${NotebookExecutionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html">studio</a></td>
-                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:studio/\${StudioId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elemental Appliances and Software</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftware.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/elemental-appliances-software">quote</a></td>
-                    <td>arn:\${Partition}:elemental-appliances-software:\${Region}:\${Account}:quote/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elemental MediaPackage V2</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/channel-groups.html">ChannelGroup</a></td>
-                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/channels.html">Channel</a></td>
-                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}/channel/\${ChannelName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/endpoints.html">OriginEndpoint</a></td>
-                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}/channel/\${ChannelName}/originEndpoint/\${OriginEndpointName}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Elastic Load Balancing V2</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancingv2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -3902,93 +3784,73 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Elemental MediaConnect</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html</p>
+        <h1>AWS Elemental Appliances and Software Activation Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftwareactivationservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/entitlements.html">Entitlement</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:entitlement:\${FlowId}:\${EntitlementName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/flows.html">Flow</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:flow:\${FlowId}:\${FlowName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/outputs.html">Output</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:output:\${OutputId}:\${OutputName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/sources.html">Source</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:source:\${SourceId}:\${SourceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway.html">Gateway</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:gateway:\${GatewayId}:\${GatewayName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway-components-bridges.html">Bridge</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:bridge:\${FlowId}:\${FlowName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway-components-instances.html">GatewayInstance</a></td>
-                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:gateway:\${GatewayId}:\${GatewayName}:instance:\${InstanceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/elemental-appliances-software/">activation</a></td>
+                    <td>arn:\${Partition}:elemental-activations:\${Region}:\${Account}:activation/\${ResourceId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Elemental MediaConvert</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html</p>
+        <h1>AWS Elastic Disaster Recovery</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticdisasterrecovery.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobs.html">Job</a></td>
-                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:jobs/\${JobId}</td>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/failback-overview.html">JobResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:job/\${JobID}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/queues.html">Queue</a></td>
-                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:queues/\${QueueName}</td>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/recovery-instances.html">RecoveryInstanceResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:recovery-instance/\${RecoveryInstanceID}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/presets.html">Preset</a></td>
-                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:presets/\${PresetName}</td>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/replication-settings-template.html">ReplicationConfigurationTemplateResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:replication-configuration-template/\${ReplicationConfigurationTemplateID}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobtemplates.html">JobTemplate</a></td>
-                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:jobTemplates/\${JobTemplateName}</td>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/default-drs-launch-settings.html">LaunchConfigurationTemplateResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:launch-configuration-template/\${LaunchConfigurationTemplateID}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/certificates.html">CertificateAssociation</a></td>
-                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:certificates/\${CertificateArn}</td>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/source-servers.html">SourceServerResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:source-server/\${SourceServerID}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/drs/latest/userguide/source-networks.html">SourceNetworkResource</a></td>
+                    <td>arn:\${Partition}:drs:\${Region}:\${Account}:source-network/\${SourceNetworkID}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Elemental MediaPackage</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackage.html</p>
+        <h1>Amazon Elastic Transcoder</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastictranscoder.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/channels.html">channels</a></td>
-                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:channels/\${ChannelIdentifier}</td>
+                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-jobs.html">job</a></td>
+                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:job/\${JobId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/endpoints.html">origin_endpoints</a></td>
-                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:origin_endpoints/\${OriginEndpointIdentifier}</td>
+                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-pipelines.html">pipeline</a></td>
+                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:pipeline/\${PipelineId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/harvest-jobs.html">harvest_jobs</a></td>
-                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:harvest_jobs/\${HarvestJobIdentifier}</td>
+                    <td><a href="https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/operations-presets.html">preset</a></td>
+                    <td>arn:\${Partition}:elastictranscoder:\${Region}:\${Account}:preset/\${PresetId}</td>
                 </tr>
             </tbody>
         </table>
@@ -3997,7 +3859,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4050,12 +3912,150 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Elemental MediaPackage</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackage.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/channels.html">channels</a></td>
+                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:channels/\${ChannelIdentifier}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/endpoints.html">origin_endpoints</a></td>
+                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:origin_endpoints/\${OriginEndpointIdentifier}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/ug/harvest-jobs.html">harvest_jobs</a></td>
+                    <td>arn:\${Partition}:mediapackage:\${Region}:\${Account}:harvest_jobs/\${HarvestJobIdentifier}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Elastic MapReduce</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticmapreduce.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview.html">cluster</a></td>
+                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:cluster/\${ClusterId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html">editor</a></td>
+                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:editor/\${EditorId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-headless.html">notebook-execution</a></td>
+                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:notebook-execution/\${NotebookExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html">studio</a></td>
+                    <td>arn:\${Partition}:elasticmapreduce:\${Region}:\${Account}:studio/\${StudioId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Elemental MediaPackage V2</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/channel-groups.html">ChannelGroup</a></td>
+                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/channels.html">Channel</a></td>
+                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}/channel/\${ChannelName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/endpoints.html">OriginEndpoint</a></td>
+                    <td>arn:\${Partition}:mediapackagev2:\${Region}:\${Account}:channelGroup/\${ChannelGroupName}/channel/\${ChannelName}/originEndpoint/\${OriginEndpointName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Elemental MediaConvert</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobs.html">Job</a></td>
+                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:jobs/\${JobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/queues.html">Queue</a></td>
+                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:queues/\${QueueName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/presets.html">Preset</a></td>
+                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:presets/\${PresetName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobtemplates.html">JobTemplate</a></td>
+                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:jobTemplates/\${JobTemplateName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconvert/latest/apireference/certificates.html">CertificateAssociation</a></td>
+                    <td>arn:\${Partition}:mediaconvert:\${Region}:\${Account}:certificates/\${CertificateArn}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Elemental MediaConnect</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/entitlements.html">Entitlement</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:entitlement:\${FlowId}:\${EntitlementName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/flows.html">Flow</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:flow:\${FlowId}:\${FlowName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/outputs.html">Output</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:output:\${OutputId}:\${OutputName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/sources.html">Source</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:source:\${SourceId}:\${SourceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway.html">Gateway</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:gateway:\${GatewayId}:\${GatewayName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway-components-bridges.html">Bridge</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:bridge:\${FlowId}:\${FlowName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediaconnect/latest/ug/gateway-components-instances.html">GatewayInstance</a></td>
+                    <td>arn:\${Partition}:mediaconnect:\${Region}:\${Account}:gateway:\${GatewayId}:\${GatewayName}:instance:\${InstanceId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Elemental MediaPackage VOD</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagevod.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4077,87 +4077,17 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
-        </table>
-        <h1>AWS Elemental MediaTailor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediatailor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/playbackconfiguration.html">playbackConfiguration</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:playbackConfiguration/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/prefetchschedule-playbackconfigurationname-name.html">prefetchSchedule</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:prefetchSchedule/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/channel-channelname.html">channel</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:channel/\${ChannelName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/channel-channelname-program-programname.html">program</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:program/\${ChannelName}/\${ProgramName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname.html">sourceLocation</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:sourceLocation/\${SourceLocationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname-vodsource-vodsourcename.html">vodSource</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:vodSource/\${SourceLocationName}/\${VodSourceName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname-livesource-livesourcename.html">liveSource</a></td>
-                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:liveSource/\${SourceLocationName}/\${LiveSourceName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Elemental Support Content</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcontent.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Elemental MediaStore</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediastore.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/containers.html">container</a></td>
-                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/objects.html">object</a></td>
-                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}/\${ObjectPath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/folders.html">folder</a></td>
-                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}/\${FolderPath}</td>
-                </tr>
-            </tbody>
         </table>
         <h1>Amazon ElastiCache</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticache.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4210,26 +4140,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon EventBridge Pipes</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgepipes.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html">pipe</a></td>
-                    <td>arn:\${Partition}:pipes:\${Region}:\${Account}:pipe/\${Name}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon EMR Serverless</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4242,12 +4158,50 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Elemental MediaTailor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediatailor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/playbackconfiguration.html">playbackConfiguration</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:playbackConfiguration/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/prefetchschedule-playbackconfigurationname-name.html">prefetchSchedule</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:prefetchSchedule/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/channel-channelname.html">channel</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:channel/\${ChannelName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/channel-channelname-program-programname.html">program</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:program/\${ChannelName}/\${ProgramName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname.html">sourceLocation</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:sourceLocation/\${SourceLocationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname-vodsource-vodsourcename.html">vodSource</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:vodSource/\${SourceLocationName}/\${VodSourceName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediatailor/latest/apireference/sourcelocation-sourcelocationname-livesource-livesourcename.html">liveSource</a></td>
+                    <td>arn:\${Partition}:mediatailor:\${Region}:\${Account}:liveSource/\${SourceLocationName}/\${LiveSourceName}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon EMR on EKS (EMR Containers)</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemroneksemrcontainers.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4272,12 +4226,44 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Elemental MediaStore</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediastore.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/containers.html">container</a></td>
+                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/objects.html">object</a></td>
+                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}/\${ObjectPath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mediastore/latest/ug/folders.html">folder</a></td>
+                    <td>arn:\${Partition}:mediastore:\${Region}:\${Account}:container/\${ContainerName}/\${FolderPath}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Elemental Support Content</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcontent.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS Entity Resolution</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4302,12 +4288,90 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Fault Injection Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfaultinjectionservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/actions.html">action</a></td>
+                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:action/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/experiments.html">experiment</a></td>
+                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:experiment/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/working-with-templates.html">experiment-template</a></td>
+                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:experiment-template/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon FinSpace API</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspaceapi.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/finspace/latest/userguide/finspace-example-policies.html">credential</a></td>
+                    <td>arn:\${Partition}:finspace-api:\${Region}:\${Account}:/credentials/programmatic</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Free Tier</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfreetier.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon EventBridge Scheduler</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgescheduler.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule-group.html">schedule-group</a></td>
+                    <td>arn:\${Partition}:scheduler:\${Region}:\${Account}:schedule-group/\${GroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule.html">schedule</a></td>
+                    <td>arn:\${Partition}:scheduler:\${Region}:\${Account}:schedule/\${GroupName}/\${ScheduleName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon EventBridge Pipes</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgepipes.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html">pipe</a></td>
+                    <td>arn:\${Partition}:pipes:\${Region}:\${Account}:pipe/\${Name}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon EventBridge</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4348,12 +4412,30 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon FreeRTOS</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfreertos.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/freertos/latest/userguide/freertos-ocw.html">configuration</a></td>
+                    <td>arn:\${Partition}:freertos:\${Region}:\${Account}:configuration/\${ConfigurationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/freertos/latest/userguide/freertos-getting-started-emp.html">subscription</a></td>
+                    <td>arn:\${Partition}:freertos:\${Region}:\${Account}:subscription/\${SubscriptionID}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon EventBridge Schemas</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgeschemas.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4370,45 +4452,45 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Free Tier</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfreetier.html</p>
+        <h1>Amazon FSx</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon FinSpace API</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspaceapi.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/finspace/latest/userguide/finspace-example-policies.html">credential</a></td>
-                    <td>arn:\${Partition}:finspace-api:\${Region}:\${Account}:/credentials/programmatic</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon FreeRTOS</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfreertos.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/freertos/latest/userguide/freertos-ocw.html">configuration</a></td>
-                    <td>arn:\${Partition}:freertos:\${Region}:\${Account}:configuration/\${ConfigurationName}</td>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-overview.html#access-control-resources">file-system</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:file-system/\${FileSystemId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/freertos/latest/userguide/freertos-getting-started-emp.html">subscription</a></td>
-                    <td>arn:\${Partition}:freertos:\${Region}:\${Account}:subscription/\${SubscriptionID}</td>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/security-iam.html">file-cache</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:file-cache/\${FileCacheId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-overview.html#access-control-resources">backup</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:backup/\${BackupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html">storage-virtual-machine</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:storage-virtual-machine/\${FileSystemId}/\${StorageVirtualMachineId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/access-control-overview.html#access-control-resources">task</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:task/\${TaskId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/access-control-overview.html#access-control-resources">association</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:association/\${FileSystemIdOrFileCacheId}/\${DataRepositoryAssociationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html">volume</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:volume/\${FileSystemId}/\${VolumeId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/access-control-overview.html#access-control-resources">snapshot</a></td>
+                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:snapshot/\${VolumeId}/\${SnapshotId}</td>
                 </tr>
             </tbody>
         </table>
@@ -4417,7 +4499,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4458,43 +4540,69 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Fault Injection Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfaultinjectionservice.html</p>
+        <h1>Amazon Fraud Detector</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/actions.html">action</a></td>
-                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:action/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">batch-prediction</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:batch-prediction/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/experiments.html">experiment</a></td>
-                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:experiment/\${Id}</td>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">detector</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:detector/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/fis/latest/userguide/working-with-templates.html">experiment-template</a></td>
-                    <td>arn:\${Partition}:fis:\${Region}:\${Account}:experiment-template/\${Id}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon EventBridge Scheduler</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgescheduler.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule-group.html">schedule-group</a></td>
-                    <td>arn:\${Partition}:scheduler:\${Region}:\${Account}:schedule-group/\${GroupName}</td>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">detector-version</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:detector-version/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule.html">schedule</a></td>
-                    <td>arn:\${Partition}:scheduler:\${Region}:\${Account}:schedule/\${GroupName}/\${ScheduleName}</td>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">entity-type</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:entity-type/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">external-model</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:external-model/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">event-type</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:event-type/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">label</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:label/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">model</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:model/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">model-version</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:model-version/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">outcome</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:outcome/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">rule</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:rule/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">variable</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:variable/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">batch-import</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:batch-import/\${ResourcePath}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">list</a></td>
+                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:list/\${ResourcePath}</td>
                 </tr>
             </tbody>
         </table>
@@ -4503,7 +4611,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4524,54 +4632,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Ground Station</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgroundstation.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ConfigListItem.html">Config</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:config/\${ConfigType}/\${ConfigId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ContactData.html">Contact</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:contact/\${ContactId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_DataflowEndpoint.html">DataflowEndpointGroup</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:dataflow-endpoint-group/\${DataflowEndpointGroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_EphemerisItem.html">EphemerisItem</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:ephemeris/\${EphemerisId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_GroundStationData.html">GroundStationResource</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:groundstation:\${GroundStationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_MissionProfileListItem.html">MissionProfile</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:mission-profile/\${MissionProfileId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_SatelliteListItem.html">Satellite</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:satellite/\${SatelliteId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_AgentDetails.html">Agent</a></td>
-                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:agent/\${AgentId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Forecast</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonforecast.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4636,120 +4702,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon FSx</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-overview.html#access-control-resources">file-system</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:file-system/\${FileSystemId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/security-iam.html">file-cache</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:file-cache/\${FileCacheId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-overview.html#access-control-resources">backup</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:backup/\${BackupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html">storage-virtual-machine</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:storage-virtual-machine/\${FileSystemId}/\${StorageVirtualMachineId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/access-control-overview.html#access-control-resources">task</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:task/\${TaskId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/access-control-overview.html#access-control-resources">association</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:association/\${FileSystemIdOrFileCacheId}/\${DataRepositoryAssociationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html">volume</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:volume/\${FileSystemId}/\${VolumeId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/access-control-overview.html#access-control-resources">snapshot</a></td>
-                    <td>arn:\${Partition}:fsx:\${Region}:\${Account}:snapshot/\${VolumeId}/\${SnapshotId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Fraud Detector</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">batch-prediction</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:batch-prediction/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">detector</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:detector/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">detector-version</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:detector-version/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">entity-type</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:entity-type/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">external-model</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:external-model/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">event-type</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:event-type/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">label</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:label/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">model</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:model/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">model-version</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:model-version/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">outcome</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:outcome/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">rule</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:rule/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">variable</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:variable/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">batch-import</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:batch-import/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html#amazonfrauddetector-resources-for-iam-policies">list</a></td>
-                    <td>arn:\${Partition}:frauddetector:\${Region}:\${Account}:list/\${ResourcePath}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Global Accelerator</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglobalaccelerator.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4770,30 +4728,126 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS HealthImaging</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html</p>
+        <h1>AWS Health APIs and Notifications</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthapisandnotifications.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/healthimaging/latest/devguide/API_DatastoreProperties.html">datastore</a></td>
-                    <td>arn:\${Partition}:medical-imaging:\${Region}:\${Account}:datastore/\${DatastoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/healthimaging/latest/devguide/API_ImageSetProperties.html">imageset</a></td>
-                    <td>arn:\${Partition}:medical-imaging:\${Region}:\${Account}:datastore/\${DatastoreId}/imageset/\${ImageSetId}</td>
+                    <td><a href="https://docs.aws.amazon.com/health/latest/ug/supported-operations.html">event</a></td>
+                    <td>arn:\${Partition}:health:*::event/\${Service}/\${EventTypeCode}/*</td>
                 </tr>
             </tbody>
+        </table>
+        <h1>AWS Ground Station</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgroundstation.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ConfigListItem.html">Config</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:config/\${ConfigType}/\${ConfigId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ContactData.html">Contact</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:contact/\${ContactId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_DataflowEndpoint.html">DataflowEndpointGroup</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:dataflow-endpoint-group/\${DataflowEndpointGroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_EphemerisItem.html">EphemerisItem</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:ephemeris/\${EphemerisId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_GroundStationData.html">GroundStationResource</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:groundstation:\${GroundStationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_MissionProfileListItem.html">MissionProfile</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:mission-profile/\${MissionProfileId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_SatelliteListItem.html">Satellite</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:satellite/\${SatelliteId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ground-station/latest/APIReference/API_AgentDetails.html">Agent</a></td>
+                    <td>arn:\${Partition}:groundstation:\${Region}:\${Account}:agent/\${AgentId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Glue DataBrew</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgluedatabrew.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/projects.html">Project</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:project/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/datasets.html">Dataset</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:dataset/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/rulesets.html">Ruleset</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:ruleset/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/recipes.html">Recipe</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:recipe/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/jobs.html">Job</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/jobs.html#jobs.scheduling">Schedule</a></td>
+                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:schedule/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS HealthLake</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/healthlake/latest/APIReference/API_DatastoreProperties.html">datastore</a></td>
+                    <td>arn:\${Partition}:healthlake:\${Region}:\${Account}:datastore/fhir/\${DatastoreId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon GroundTruth Labeling</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongroundtruthlabeling.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
         </table>
         <h1>Amazon GameLift</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamelift.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -4838,146 +4892,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Health APIs and Notifications</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthapisandnotifications.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/health/latest/ug/supported-operations.html">event</a></td>
-                    <td>arn:\${Partition}:health:*::event/\${Service}/\${EventTypeCode}/*</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon GroundTruth Labeling</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongroundtruthlabeling.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon GuardDuty</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">detector</a></td>
-                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">filter</a></td>
-                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/filter/\${FilterName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">ipset</a></td>
-                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/ipset/\${IPSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">threatintelset</a></td>
-                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/threatintelset/\${ThreatIntelSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">publishingDestination</a></td>
-                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/publishingDestination/\${PublishingDestinationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS HealthLake</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/healthlake/latest/APIReference/API_DatastoreProperties.html">datastore</a></td>
-                    <td>arn:\${Partition}:healthlake:\${Region}:\${Account}:datastore/fhir/\${DatastoreId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Glue DataBrew</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgluedatabrew.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/projects.html">Project</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:project/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/datasets.html">Dataset</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:dataset/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/rulesets.html">Ruleset</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:ruleset/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/recipes.html">Recipe</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:recipe/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/jobs.html">Job</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/databrew/latest/dg/jobs.html#jobs.scheduling">Schedule</a></td>
-                    <td>arn:\${Partition}:databrew:\${Region}:\${Account}:schedule/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IAM Access Analyzer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">Analyzer</a></td>
-                    <td>arn:\${Partition}:access-analyzer:\${Region}:\${Account}:analyzer/\${AnalyzerName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ArchiveRule</a></td>
-                    <td>arn:\${Partition}:access-analyzer:\${Region}:\${Account}:analyzer/\${AnalyzerName}/archive-rule/\${RuleName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IAM Identity Center OIDC service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenteroidcservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html">Application</a></td>
-                    <td>arn:\${Partition}:sso::\${AccountId}:application/\${InstanceId}/\${ApplicationId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Honeycode</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonhoneycode.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5003,7 +4923,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5012,254 +4932,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Identity Sync</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitysync.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html">SyncProfileResource</a></td>
-                    <td>arn:\${Partition}:identity-sync:\${Region}:\${Account}:profile/\${SyncProfileName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html">SyncTargetResource</a></td>
-                    <td>arn:\${Partition}:identity-sync:\${Region}:\${Account}:target/\${SyncProfileName}/\${SyncTargetName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS HealthOmics</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthomics.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationImportJobItem.html">AnnotationImportJob</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationImportJob/\${AnnotationImportJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationStoreItem.html">AnnotationStore</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationStore/\${AnnotationStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationStoreVersionItem.html">AnnotationStoreVersion</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationStore/\${AnnotationStoreName}/version/\${AnnotationStoreVersionName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReadSetFiles.html">readSet</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:sequenceStore/\${SequenceStoreId}/readSet/\${ReadSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReferenceFiles.html">reference</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:referenceStore/\${ReferenceStoreId}/reference/\${ReferenceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReferenceStoreDetail.html">referenceStore</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:referenceStore/\${ReferenceStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_RunListItem.html">run</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:run/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_RunGroupListItem.html">runGroup</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:runGroup/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_SequenceStoreDetail.html">sequenceStore</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:sequenceStore/\${SequenceStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_TagResource.html">TaggingResource</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:tag/\${TagKey}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_TaskListItem.html">TaskResource</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:task/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_VariantImportJobItem.html">VariantImportJob</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:variantImportJob/\${VariantImportJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_VariantStoreItem.html">VariantStore</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:variantStore/\${VariantStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_WorkflowListItem.html">workflow</a></td>
-                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:workflow/\${Id}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IAM Identity Center (successor to AWS Single Sign-On) directory</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycentersuccessortoawssinglesign-ondirectory.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS IAM Identity Center (successor to AWS Single Sign-On)</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycentersuccessortoawssinglesign-on.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html">PermissionSet</a></td>
-                    <td>arn:\${Partition}:sso:::permissionSet/\${InstanceId}/\${PermissionSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-accounts.html">Account</a></td>
-                    <td>arn:\${Partition}:sso:::account/\${AccountId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_InstanceMetadata.html">Instance</a></td>
-                    <td>arn:\${Partition}:sso:::instance/\${InstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Application.html">Application</a></td>
-                    <td>arn:\${Partition}:sso::\${AccountId}:application/\${InstanceId}/\${ApplicationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_TrustedTokenIssuerMetadata.html">TrustedTokenIssuer</a></td>
-                    <td>arn:\${Partition}:sso::\${AccountId}:trustedTokenIssuer/\${InstanceId}/\${TrustedTokenIssuerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ApplicationProvider.html">ApplicationProvider</a></td>
-                    <td>arn:\${Partition}:sso::aws:applicationProvider/\${ApplicationProviderId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Inspector</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Identity Store Auth</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystoreauth.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Identity Store</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystore.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">Identitystore</a></td>
-                    <td>arn:\${Partition}:identitystore::\${Account}:identitystore/\${IdentityStoreId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">User</a></td>
-                    <td>arn:\${Partition}:identitystore:::user/\${UserId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">Group</a></td>
-                    <td>arn:\${Partition}:identitystore:::group/\${GroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">GroupMembership</a></td>
-                    <td>arn:\${Partition}:identitystore:::membership/\${MembershipId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllUsers</a></td>
-                    <td>arn:\${Partition}:identitystore:::user/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllGroups</a></td>
-                    <td>arn:\${Partition}:identitystore:::group/*</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllGroupMemberships</a></td>
-                    <td>arn:\${Partition}:identitystore:::membership/*</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Import Export Disk Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsimportexportdiskservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Invoicing Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinvoicingservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Identity and Access Management Roles Anywhere</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">trust-anchor</a></td>
-                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:trust-anchor/\${TrustAnchorId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">profile</a></td>
-                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:profile/\${ProfileId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">subject</a></td>
-                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:subject/\${SubjectId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">crl</a></td>
-                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:crl/\${CrlId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon InspectorScan</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspectorscan.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>AWS Glue</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5340,30 +5018,314 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Interactive Video Service Chat</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservicechat.html</p>
+        <h1>AWS HealthImaging</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_Room.html">Room</a></td>
-                    <td>arn:\${Partition}:ivschat:\${Region}:\${Account}:room/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/healthimaging/latest/devguide/API_DatastoreProperties.html">datastore</a></td>
+                    <td>arn:\${Partition}:medical-imaging:\${Region}:\${Account}:datastore/\${DatastoreId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_LoggingConfiguration.html">Logging-Configuration</a></td>
-                    <td>arn:\${Partition}:ivschat:\${Region}:\${Account}:logging-configuration/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/healthimaging/latest/devguide/API_ImageSetProperties.html">imageset</a></td>
+                    <td>arn:\${Partition}:medical-imaging:\${Region}:\${Account}:datastore/\${DatastoreId}/imageset/\${ImageSetId}</td>
                 </tr>
             </tbody>
+        </table>
+        <h1>AWS HealthOmics</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthomics.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationImportJobItem.html">AnnotationImportJob</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationImportJob/\${AnnotationImportJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationStoreItem.html">AnnotationStore</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationStore/\${AnnotationStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_AnnotationStoreVersionItem.html">AnnotationStoreVersion</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:annotationStore/\${AnnotationStoreName}/version/\${AnnotationStoreVersionName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReadSetFiles.html">readSet</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:sequenceStore/\${SequenceStoreId}/readSet/\${ReadSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReferenceFiles.html">reference</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:referenceStore/\${ReferenceStoreId}/reference/\${ReferenceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_ReferenceStoreDetail.html">referenceStore</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:referenceStore/\${ReferenceStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_RunListItem.html">run</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:run/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_RunGroupListItem.html">runGroup</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:runGroup/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_SequenceStoreDetail.html">sequenceStore</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:sequenceStore/\${SequenceStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_TagResource.html">TaggingResource</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:tag/\${TagKey}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_TaskListItem.html">TaskResource</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:task/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_VariantImportJobItem.html">VariantImportJob</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:variantImportJob/\${VariantImportJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_VariantStoreItem.html">VariantStore</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:variantStore/\${VariantStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/omics/latest/api/API_WorkflowListItem.html">workflow</a></td>
+                    <td>arn:\${Partition}:omics:\${Region}:\${Account}:workflow/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon GuardDuty</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">detector</a></td>
+                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">filter</a></td>
+                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/filter/\${FilterName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">ipset</a></td>
+                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/ipset/\${IPSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">threatintelset</a></td>
+                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/threatintelset/\${ThreatIntelSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_managing_access.html#guardduty-resources">publishingDestination</a></td>
+                    <td>arn:\${Partition}:guardduty:\${Region}:\${Account}:detector/\${DetectorId}/publishingDestination/\${PublishingDestinationId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IAM Access Analyzer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">Analyzer</a></td>
+                    <td>arn:\${Partition}:access-analyzer:\${Region}:\${Account}:analyzer/\${AnalyzerName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ArchiveRule</a></td>
+                    <td>arn:\${Partition}:access-analyzer:\${Region}:\${Account}:analyzer/\${AnalyzerName}/archive-rule/\${RuleName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IAM Identity Center (successor to AWS Single Sign-On)</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycentersuccessortoawssinglesign-on.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html">PermissionSet</a></td>
+                    <td>arn:\${Partition}:sso:::permissionSet/\${InstanceId}/\${PermissionSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-accounts.html">Account</a></td>
+                    <td>arn:\${Partition}:sso:::account/\${AccountId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_InstanceMetadata.html">Instance</a></td>
+                    <td>arn:\${Partition}:sso:::instance/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Application.html">Application</a></td>
+                    <td>arn:\${Partition}:sso::\${AccountId}:application/\${InstanceId}/\${ApplicationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_TrustedTokenIssuerMetadata.html">TrustedTokenIssuer</a></td>
+                    <td>arn:\${Partition}:sso::\${AccountId}:trustedTokenIssuer/\${InstanceId}/\${TrustedTokenIssuerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ApplicationProvider.html">ApplicationProvider</a></td>
+                    <td>arn:\${Partition}:sso::aws:applicationProvider/\${ApplicationProviderId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Identity Sync</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitysync.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html">SyncProfileResource</a></td>
+                    <td>arn:\${Partition}:identity-sync:\${Region}:\${Account}:profile/\${SyncProfileName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html">SyncTargetResource</a></td>
+                    <td>arn:\${Partition}:identity-sync:\${Region}:\${Account}:target/\${SyncProfileName}/\${SyncTargetName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Identity Store</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystore.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">Identitystore</a></td>
+                    <td>arn:\${Partition}:identitystore::\${Account}:identitystore/\${IdentityStoreId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">User</a></td>
+                    <td>arn:\${Partition}:identitystore:::user/\${UserId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">Group</a></td>
+                    <td>arn:\${Partition}:identitystore:::group/\${GroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">GroupMembership</a></td>
+                    <td>arn:\${Partition}:identitystore:::membership/\${MembershipId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllUsers</a></td>
+                    <td>arn:\${Partition}:identitystore:::user/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllGroups</a></td>
+                    <td>arn:\${Partition}:identitystore:::group/*</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/">AllGroupMemberships</a></td>
+                    <td>arn:\${Partition}:identitystore:::membership/*</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Identity Store Auth</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystoreauth.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS IAM Identity Center OIDC service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenteroidcservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html">Application</a></td>
+                    <td>arn:\${Partition}:sso::\${AccountId}:application/\${InstanceId}/\${ApplicationId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Identity and Access Management Roles Anywhere</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">trust-anchor</a></td>
+                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:trust-anchor/\${TrustAnchorId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">profile</a></td>
+                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:profile/\${ProfileId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">subject</a></td>
+                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:subject/\${SubjectId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html#first-time-user">crl</a></td>
+                    <td>arn:\${Partition}:rolesanywhere:\${Region}:\${Account}:crl/\${CrlId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IAM Identity Center (successor to AWS Single Sign-On) directory</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycentersuccessortoawssinglesign-ondirectory.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Import Export Disk Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsimportexportdiskservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon InspectorScan</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspectorscan.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
         </table>
         <h1>Amazon Inspector2</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5380,136 +5342,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Interactive Video Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_Channel.html">Channel</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:channel/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_StreamKey.html">Stream-Key</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:stream-key/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_PlaybackKeyPair.html">Playback-Key-Pair</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:playback-key/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_PlaybackRestrictionPolicy.html">Playback-Restriction-Policy</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:playback-restriction-policy/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_RecordingConfiguration.html">Recording-Configuration</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:recording-configuration/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_Stage.html">Stage</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:stage/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_Composition.html">Composition</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:composition/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_EncoderConfiguration.html">Encoder-Configuration</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:encoder-configuration/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_StorageConfiguration.html">Storage-Configuration</a></td>
-                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:storage-configuration/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT Device Tester</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotdevicetester.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS IoT 1-Click</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot1-click.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/resources.html">device</a></td>
-                    <td>arn:\${Partition}:iot1click:\${Region}:\${Account}:devices/\${DeviceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_Operations.html">project</a></td>
-                    <td>arn:\${Partition}:iot1click:\${Region}:\${Account}:projects/\${ProjectName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT Events</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotevents.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">detectorModel</a></td>
-                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:detectorModel/\${DetectorModelName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">alarmModel</a></td>
-                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:alarmModel/\${AlarmModelName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">input</a></td>
-                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:input/\${InputName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT Fleet Hub for Device Management</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_ApplicationSummary.html">application</a></td>
-                    <td>arn:\${Partition}:iotfleethub:\${Region}:\${Account}:application/\${ApplicationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT Jobs DataPlane</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotjobsdataplane.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html">thing</a></td>
-                    <td>arn:\${Partition}:iot:\${Region}:\${Account}:thing/\${ThingName}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Identity and Access Management (IAM)</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementiam.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5566,12 +5404,146 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Inspector</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Interactive Video Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_Channel.html">Channel</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:channel/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_StreamKey.html">Stream-Key</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:stream-key/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_PlaybackKeyPair.html">Playback-Key-Pair</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:playback-key/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_PlaybackRestrictionPolicy.html">Playback-Restriction-Policy</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:playback-restriction-policy/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_RecordingConfiguration.html">Recording-Configuration</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:recording-configuration/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_Stage.html">Stage</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:stage/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_Composition.html">Composition</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:composition/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_EncoderConfiguration.html">Encoder-Configuration</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:encoder-configuration/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_StorageConfiguration.html">Storage-Configuration</a></td>
+                    <td>arn:\${Partition}:ivs:\${Region}:\${Account}:storage-configuration/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Interactive Video Service Chat</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservicechat.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_Room.html">Room</a></td>
+                    <td>arn:\${Partition}:ivschat:\${Region}:\${Account}:room/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_LoggingConfiguration.html">Logging-Configuration</a></td>
+                    <td>arn:\${Partition}:ivschat:\${Region}:\${Account}:logging-configuration/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IoT Events</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotevents.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">detectorModel</a></td>
+                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:detectorModel/\${DetectorModelName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">alarmModel</a></td>
+                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:alarmModel/\${AlarmModelName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-getting-started.html">input</a></td>
+                    <td>arn:\${Partition}:iotevents:\${Region}:\${Account}:input/\${InputName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Invoicing Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinvoicingservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS IoT Core Device Advisor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotcoredeviceadvisor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-advisor-workflow.html#device-advisor-workflow-create-suite-definition">Suitedefinition</a></td>
+                    <td>arn:\${Partition}:iotdeviceadvisor:\${Region}:\${Account}:suitedefinition/\${SuiteDefinitionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-advisor-workflow.html#device-advisor-workflow-start-suite-run">Suiterun</a></td>
+                    <td>arn:\${Partition}:iotdeviceadvisor:\${Region}:\${Account}:suiterun/\${SuiteDefinitionId}/\${SuiteRunId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IoT Device Tester</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotdevicetester.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS IoT Analytics</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotanalytics.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5592,77 +5564,35 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS IoT Core Device Advisor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotcoredeviceadvisor.html</p>
+        <h1>AWS IoT 1-Click</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot1-click.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-advisor-workflow.html#device-advisor-workflow-create-suite-definition">Suitedefinition</a></td>
-                    <td>arn:\${Partition}:iotdeviceadvisor:\${Region}:\${Account}:suitedefinition/\${SuiteDefinitionId}</td>
+                    <td><a href="https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/resources.html">device</a></td>
+                    <td>arn:\${Partition}:iot1click:\${Region}:\${Account}:devices/\${DeviceId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-advisor-workflow.html#device-advisor-workflow-start-suite-run">Suiterun</a></td>
-                    <td>arn:\${Partition}:iotdeviceadvisor:\${Region}:\${Account}:suiterun/\${SuiteDefinitionId}/\${SuiteRunId}</td>
+                    <td><a href="https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_Operations.html">project</a></td>
+                    <td>arn:\${Partition}:iot1click:\${Region}:\${Account}:projects/\${ProjectName}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS IoT Greengrass V2</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrassv2.html</p>
+        <h1>AWS IoT Fleet Hub for Device Management</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_ConnectivityInfo.html">connectivityInfo</a></td>
-                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:/greengrass/things/\${ThingName}/connectivityInfo</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Component.html">component</a></td>
-                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:components:\${ComponentName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Component.html">componentVersion</a></td>
-                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:components:\${ComponentName}:versions:\${ComponentVersion}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CoreDevice.html">coreDevice</a></td>
-                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:coreDevices:\${CoreDeviceThingName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Deployment.html">deployment</a></td>
-                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:deployments:\${DeploymentId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT RoboRunner</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotroborunner.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">DestinationResource</a></td>
-                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/destination/\${DestinationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">SiteResource</a></td>
-                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">WorkerFleetResource</a></td>
-                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/worker-fleet/\${WorkerFleetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">WorkerResource</a></td>
-                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/worker-fleet/\${WorkerFleetId}/worker/\${WorkerId}</td>
+                    <td><a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_ApplicationSummary.html">application</a></td>
+                    <td>arn:\${Partition}:iotfleethub:\${Region}:\${Account}:application/\${ApplicationId}</td>
                 </tr>
             </tbody>
         </table>
@@ -5671,7 +5601,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5700,131 +5630,73 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS IQ Permissions</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiqpermissions.html</p>
+        <h1>AWS IoT RoboRunner</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotroborunner.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://aws.amazon.com/iq/">permission</a></td>
-                    <td>arn:\${Partition}:iq-permission:\${Region}::permission/\${PermissionRequestId}</td>
+                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">DestinationResource</a></td>
+                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/destination/\${DestinationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">SiteResource</a></td>
+                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">WorkerFleetResource</a></td>
+                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/worker-fleet/\${WorkerFleetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iotroborunner/latest/api/">WorkerResource</a></td>
+                    <td>arn:\${Partition}:iotroborunner:\${Region}:\${Account}:site/\${SiteId}/worker-fleet/\${WorkerFleetId}/worker/\${WorkerId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS IoT TwinMaker</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html</p>
+        <h1>AWS IoT Jobs DataPlane</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotjobsdataplane.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateWorkspace.html">workspace</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateEntity.html">entity</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/entity/\${EntityId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateComponentType.html">componentType</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/component-type/\${ComponentTypeId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateScene.html">scene</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/scene/\${SceneId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateSyncJob.html">syncJob</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/sync-job/\${SyncJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateMetadataTransferJob.html">metadataTransferJob</a></td>
-                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:metadata-transfer-job/\${MetadataTransferJobId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Keyspaces (for Apache Cassandra)</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkeyspacesforapachecassandra.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/what-is.html">keyspace</a></td>
-                    <td>arn:\${Partition}:cassandra:\${Region}:\${Account}:/keyspace/\${KeyspaceName}/</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/what-is.html">table</a></td>
-                    <td>arn:\${Partition}:cassandra:\${Region}:\${Account}:/keyspace/\${KeyspaceName}/table/\${TableName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS IoT Wireless</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotwireless.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessDevice.html">WirelessDevice</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessDevice/\${WirelessDeviceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessGateway.html">WirelessGateway</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessGateway/\${WirelessGatewayId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateDeviceProfile.html">DeviceProfile</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:DeviceProfile/\${DeviceProfileId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateServiceProfile.html">ServiceProfile</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:ServiceProfile/\${ServiceProfileId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateDestination.html">Destination</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:Destination/\${DestinationName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_AssociateAwsAccountWithPartnerAccount.html">SidewalkAccount</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:SidewalkAccount/\${SidewalkAccountId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessGatewayTaskDefinition.html">WirelessGatewayTaskDefinition</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessGatewayTaskDefinition/\${WirelessGatewayTaskDefinitionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateFuotaTask.html">FuotaTask</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:FuotaTask/\${FuotaTaskId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateMulticastGroup.html">MulticastGroup</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:MulticastGroup/\${MulticastGroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateNetworkAnalyzerConfiguration.html">NetworkAnalyzerConfiguration</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:NetworkAnalyzerConfiguration/\${NetworkAnalyzerConfigurationName}</td>
-                </tr>
-               <tr>
                     <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html">thing</a></td>
                     <td>arn:\${Partition}:iot:\${Region}:\${Account}:thing/\${ThingName}</td>
                 </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html">cert</a></td>
-                    <td>arn:\${Partition}:iot:\${Region}:\${Account}:cert/\${Certificate}</td>
+            </tbody>
+        </table>
+        <h1>AWS IoT Greengrass V2</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrassv2.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_ConnectivityInfo.html">connectivityInfo</a></td>
+                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:/greengrass/things/\${ThingName}/connectivityInfo</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_StartWirelessDeviceImportTask.html">ImportTask</a></td>
-                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:ImportTask/\${ImportTaskId}</td>
+                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Component.html">component</a></td>
+                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:components:\${ComponentName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Component.html">componentVersion</a></td>
+                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:components:\${ComponentName}:versions:\${ComponentVersion}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CoreDevice.html">coreDevice</a></td>
+                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:coreDevices:\${CoreDeviceThingName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_Deployment.html">deployment</a></td>
+                    <td>arn:\${Partition}:greengrass:\${Region}:\${Account}:deployments:\${DeploymentId}</td>
                 </tr>
             </tbody>
         </table>
@@ -5833,7 +5705,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5926,12 +5798,136 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS IoT Wireless</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotwireless.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessDevice.html">WirelessDevice</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessDevice/\${WirelessDeviceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessGateway.html">WirelessGateway</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessGateway/\${WirelessGatewayId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateDeviceProfile.html">DeviceProfile</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:DeviceProfile/\${DeviceProfileId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateServiceProfile.html">ServiceProfile</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:ServiceProfile/\${ServiceProfileId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateDestination.html">Destination</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:Destination/\${DestinationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_AssociateAwsAccountWithPartnerAccount.html">SidewalkAccount</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:SidewalkAccount/\${SidewalkAccountId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateWirelessGatewayTaskDefinition.html">WirelessGatewayTaskDefinition</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:WirelessGatewayTaskDefinition/\${WirelessGatewayTaskDefinitionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateFuotaTask.html">FuotaTask</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:FuotaTask/\${FuotaTaskId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateMulticastGroup.html">MulticastGroup</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:MulticastGroup/\${MulticastGroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_CreateNetworkAnalyzerConfiguration.html">NetworkAnalyzerConfiguration</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:NetworkAnalyzerConfiguration/\${NetworkAnalyzerConfigurationName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html">thing</a></td>
+                    <td>arn:\${Partition}:iot:\${Region}:\${Account}:thing/\${ThingName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html">cert</a></td>
+                    <td>arn:\${Partition}:iot:\${Region}:\${Account}:cert/\${Certificate}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-wireless/2020-11-22/apireference/API_StartWirelessDeviceImportTask.html">ImportTask</a></td>
+                    <td>arn:\${Partition}:iotwireless:\${Region}:\${Account}:ImportTask/\${ImportTaskId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Kendra Intelligent Ranking</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendraintelligentranking.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/search-service-rerank.html">rescore-execution-plan</a></td>
+                    <td>arn:\${Partition}:kendra-ranking:\${Region}:\${Account}:rescore-execution-plan/\${RescoreExecutionPlanId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IoT TwinMaker</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateWorkspace.html">workspace</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateEntity.html">entity</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/entity/\${EntityId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateComponentType.html">componentType</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/component-type/\${ComponentTypeId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateScene.html">scene</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/scene/\${SceneId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateSyncJob.html">syncJob</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:workspace/\${WorkspaceId}/sync-job/\${SyncJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_CreateMetadataTransferJob.html">metadataTransferJob</a></td>
+                    <td>arn:\${Partition}:iottwinmaker:\${Region}:\${Account}:metadata-transfer-job/\${MetadataTransferJobId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS IQ Permissions</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiqpermissions.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://aws.amazon.com/iq/">permission</a></td>
+                    <td>arn:\${Partition}:iq-permission:\${Region}::permission/\${PermissionRequestId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS IoT SiteWise</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotsitewise.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5968,12 +5964,78 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS IQ</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://aws.amazon.com/iq/">conversation</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::conversation/\${ConversationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">buyer</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::buyer/\${BuyerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">expert</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::expert/\${ExpertId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">call</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::call/\${CallId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">token</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::token/\${TokenId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">proposal</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::proposal/\${ConversationId}/\${ProposalId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">paymentRequest</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::paymentRequest/\${ConversationId}/\${ProposalId}/\${PaymentRequestId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">paymentSchedule</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::paymentSchedule/\${ConversationId}/\${ProposalId}/\${VersionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">seller</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::seller/\${SellerAwsAccountId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">company</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::company/\${CompanyId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">request</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::request/\${RequestId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">listing</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::listing/\${ListingId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">attachment</a></td>
+                    <td>arn:\${Partition}:iq:\${Region}::attachment/\${AttachmentId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://aws.amazon.com/iq/">permission</a></td>
+                    <td>arn:\${Partition}:iq-permission:\${Region}::permission/\${PermissionRequestId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon Kinesis Analytics</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalytics.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -5982,34 +6044,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Kinesis Data Streams</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisdatastreams.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">stream</a></td>
-                    <td>arn:\${Partition}:kinesis:\${Region}:\${Account}:stream/\${StreamName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-consumers.html">consumer</a></td>
-                    <td>arn:\${Partition}:kinesis:\${Region}:\${Account}:\${StreamType}/\${StreamName}/consumer/\${ConsumerName}:\${ConsumerCreationTimpstamp}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/concepts.html#kms_keys">kmsKey</a></td>
-                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:key/\${KeyId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Kinesis Analytics V2</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalyticsv2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6018,12 +6058,90 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Kendra</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendra.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/index.html">index</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source.html">data-source</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/data-source/\${DataSourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/faq.html">faq</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/faq/\${FaqId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">experience</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/experience/\${ExperienceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/thesaurus.html">thesaurus</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/thesaurus/\${ThesaurusId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions-block-list.html">query-suggestions-block-list</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/query-suggestions-block-list/\${QuerySuggestionsBlockListId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/featured-results.html">featured-results-set</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/featured-results-set/\${FeaturedResultsSetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateAccessControlConfiguration.html">access-control-configuration</a></td>
+                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/access-control-configuration/\${AccessControlConfigurationId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Key Management Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#alias-concept">alias</a></td>
+                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:alias/\${Alias}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">key</a></td>
+                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:key/\${KeyId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Keyspaces (for Apache Cassandra)</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkeyspacesforapachecassandra.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/what-is.html">keyspace</a></td>
+                    <td>arn:\${Partition}:cassandra:\${Region}:\${Account}:/keyspace/\${KeyspaceName}/</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/what-is.html">table</a></td>
+                    <td>arn:\${Partition}:cassandra:\${Region}:\${Account}:/keyspace/\${KeyspaceName}/table/\${TableName}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS IoT</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6156,162 +6274,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS IQ</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://aws.amazon.com/iq/">conversation</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::conversation/\${ConversationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">buyer</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::buyer/\${BuyerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">expert</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::expert/\${ExpertId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">call</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::call/\${CallId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">token</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::token/\${TokenId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">proposal</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::proposal/\${ConversationId}/\${ProposalId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">paymentRequest</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::paymentRequest/\${ConversationId}/\${ProposalId}/\${PaymentRequestId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">paymentSchedule</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::paymentSchedule/\${ConversationId}/\${ProposalId}/\${VersionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">seller</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::seller/\${SellerAwsAccountId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">company</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::company/\${CompanyId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">request</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::request/\${RequestId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">listing</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::listing/\${ListingId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">attachment</a></td>
-                    <td>arn:\${Partition}:iq:\${Region}::attachment/\${AttachmentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://aws.amazon.com/iq/">permission</a></td>
-                    <td>arn:\${Partition}:iq-permission:\${Region}::permission/\${PermissionRequestId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Kendra Intelligent Ranking</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendraintelligentranking.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/search-service-rerank.html">rescore-execution-plan</a></td>
-                    <td>arn:\${Partition}:kendra-ranking:\${Region}:\${Account}:rescore-execution-plan/\${RescoreExecutionPlanId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Kendra</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendra.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/index.html">index</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source.html">data-source</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/data-source/\${DataSourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/faq.html">faq</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/faq/\${FaqId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">experience</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/experience/\${ExperienceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/thesaurus.html">thesaurus</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/thesaurus/\${ThesaurusId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions-block-list.html">query-suggestions-block-list</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/query-suggestions-block-list/\${QuerySuggestionsBlockListId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/featured-results.html">featured-results-set</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/featured-results-set/\${FeaturedResultsSetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateAccessControlConfiguration.html">access-control-configuration</a></td>
-                    <td>arn:\${Partition}:kendra:\${Region}:\${Account}:index/\${IndexId}/access-control-configuration/\${AccessControlConfigurationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Key Management Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#alias-concept">alias</a></td>
-                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:alias/\${Alias}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">key</a></td>
-                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:key/\${KeyId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Launch Wizard</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslaunchwizard.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>Amazon Kinesis Firehose</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisfirehose.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6320,22 +6288,34 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Lake Formation</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html</p>
+        <h1>Amazon Kinesis Data Streams</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisdatastreams.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
-        </tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">stream</a></td>
+                    <td>arn:\${Partition}:kinesis:\${Region}:\${Account}:stream/\${StreamName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-consumers.html">consumer</a></td>
+                    <td>arn:\${Partition}:kinesis:\${Region}:\${Account}:\${StreamType}/\${StreamName}/consumer/\${ConsumerName}:\${ConsumerCreationTimpstamp}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/kinesis/latest/dev/concepts.html#kms_keys">kmsKey</a></td>
+                    <td>arn:\${Partition}:kms:\${Region}:\${Account}:key/\${KeyId}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon Lex</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlex.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6364,12 +6344,22 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Launch Wizard</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslaunchwizard.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>Amazon Kinesis Video Streams</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisvideostreams.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6382,12 +6372,32 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Lake Formation</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS License Manager Linux Subscriptions Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerlinuxsubscriptionsmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>Amazon Lex V2</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlexv2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6409,7 +6419,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -6419,7 +6429,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6452,96 +6462,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS License Manager Linux Subscriptions Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerlinuxsubscriptionsmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon Lookout for Equipment</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforequipment.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/dataset.html">dataset</a></td>
-                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:dataset/\${DatasetName}/\${DatasetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/model.html">model</a></td>
-                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:model/\${ModelName}/\${ModelId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/model-version.html">model-version</a></td>
-                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:model/\${ModelName}/\${ModelId}/model-version/\${ModelVersionNumber}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/inference-scheduler.html">inference-scheduler</a></td>
-                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:inference-scheduler/\${InferenceSchedulerName}/\${InferenceSchedulerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/label-group.html">label-group</a></td>
-                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:label-group/\${LabelGroupName}/\${LabelGroupId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Lookout for Vision</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforvision.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-vision/latest/developer-guide/model-create-project.html">model</a></td>
-                    <td>arn:\${Partition}:lookoutvision:\${Region}:\${Account}:model/\${ProjectName}/\${ModelVersion}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookout-for-vision/latest/developer-guide/model-create-project.html">project</a></td>
-                    <td>arn:\${Partition}:lookoutvision:\${Region}:\${Account}:project/\${ProjectName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS License Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/license-configurations.html">license-configuration</a></td>
-                    <td>arn:\${Partition}:license-manager:\${Region}:\${Account}:license-configuration:\${LicenseConfigurationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/seller-issued-licenses.html">license</a></td>
-                    <td>arn:\${Partition}:license-manager::\${Account}:license:\${LicenseId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">grant</a></td>
-                    <td>arn:\${Partition}:license-manager::\${Account}:grant:\${GrantId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/report-generators.html">report-generator</a></td>
-                    <td>arn:\${Partition}:license-manager:\${Region}:\${Account}:report-generator:\${ReportGeneratorId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon EC2</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6902,59 +6828,73 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Mainframe Modernization Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationservice.html</p>
+        <h1>AWS License Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/m2/latest/userguide/concept-m2.html#application-concept">Application</a></td>
-                    <td>arn:\${Partition}:m2:\${Region}:\${Account}:app/\${ApplicationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/license-configurations.html">license-configuration</a></td>
+                    <td>arn:\${Partition}:license-manager:\${Region}:\${Account}:license-configuration:\${LicenseConfigurationId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/m2/latest/userguide/concept-m2.html#environment-concept">Environment</a></td>
-                    <td>arn:\${Partition}:m2:\${Region}:\${Account}:env/\${EnvironmentId}</td>
+                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/seller-issued-licenses.html">license</a></td>
+                    <td>arn:\${Partition}:license-manager::\${Account}:license:\${LicenseId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">grant</a></td>
+                    <td>arn:\${Partition}:license-manager::\${Account}:grant:\${GrantId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/license-manager/latest/userguide/report-generators.html">report-generator</a></td>
+                    <td>arn:\${Partition}:license-manager:\${Region}:\${Account}:report-generator:\${ReportGeneratorId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Managed Streaming for Apache Kafka</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html</p>
+        <h1>Amazon Machine Learning</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmachinelearning.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html">cluster</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:cluster/\${ClusterName}/\${Uuid}</td>
+                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#batch-predictions">batchprediction</a></td>
+                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:batchprediction/\${BatchPredictionId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html">configuration</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:configuration/\${ConfigurationName}/\${Uuid}</td>
+                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#datasources">datasource</a></td>
+                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:datasource/\${DatasourceId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections-arn.html">vpc-connection</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${VpcOwnerAccount}:vpc-connection/\${ClusterOwnerAccount}/\${ClusterName}/\${Uuid}</td>
+                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#evaluations">evaluation</a></td>
+                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:evaluation/\${EvaluationId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html">replicator</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:replicator/\${ReplicatorName}/\${Uuid}</td>
+                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#ml-models">mlmodel</a></td>
+                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:mlmodel/\${MlModelId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Lookout for Vision</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforvision.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-vision/latest/developer-guide/model-create-project.html">model</a></td>
+                    <td>arn:\${Partition}:lookoutvision:\${Region}:\${Account}:model/\${ProjectName}/\${ModelVersion}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">topic</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:topic/\${ClusterName}/\${ClusterUuid}/\${TopicName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">group</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:group/\${ClusterName}/\${ClusterUuid}/\${GroupName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">transactional-id</a></td>
-                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:transactional-id/\${ClusterName}/\${ClusterUuid}/\${TransactionalId}</td>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-vision/latest/developer-guide/model-create-project.html">project</a></td>
+                    <td>arn:\${Partition}:lookoutvision:\${Region}:\${Account}:project/\${ProjectName}</td>
                 </tr>
             </tbody>
         </table>
@@ -6963,7 +6903,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -6992,55 +6932,53 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Machine Learning</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmachinelearning.html</p>
+        <h1>AWS Mainframe Modernization Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#batch-predictions">batchprediction</a></td>
-                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:batchprediction/\${BatchPredictionId}</td>
+                    <td><a href="https://docs.aws.amazon.com/m2/latest/userguide/concept-m2.html#application-concept">Application</a></td>
+                    <td>arn:\${Partition}:m2:\${Region}:\${Account}:app/\${ApplicationId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#datasources">datasource</a></td>
-                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:datasource/\${DatasourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#evaluations">evaluation</a></td>
-                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:evaluation/\${EvaluationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/amazon-machine-learning-key-concepts.html#ml-models">mlmodel</a></td>
-                    <td>arn:\${Partition}:machinelearning:\${Region}:\${Account}:mlmodel/\${MlModelId}</td>
+                    <td><a href="https://docs.aws.amazon.com/m2/latest/userguide/concept-m2.html#environment-concept">Environment</a></td>
+                    <td>arn:\${Partition}:m2:\${Region}:\${Account}:env/\${EnvironmentId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Managed Service for Prometheus</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedserviceforprometheus.html</p>
+        <h1>Amazon Managed Blockchain Query</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Lookout for Metrics</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutformetrics.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">workspace</a></td>
-                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:workspace/\${WorkspaceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_AnomalyDetectorSummary.html">AnomalyDetector</a></td>
+                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:AnomalyDetector:\${AnomalyDetectorName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">rulegroupsnamespace</a></td>
-                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:rulegroupsnamespace/\${WorkspaceId}/\${Namespace}</td>
+                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_MetricSetSummary.html">MetricSet</a></td>
+                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:MetricSet/\${AnomalyDetectorName}/\${MetricSetName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">scraper</a></td>
-                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:scraper/\${ScraperId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">cluster</a></td>
-                    <td>arn:\${Partition}:eks:\${Region}:\${Account}:cluster/\${ClusterName}</td>
+                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_AlertSummary.html">Alert</a></td>
+                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:Alert:\${AlertName}</td>
                 </tr>
             </tbody>
         </table>
@@ -7049,7 +6987,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7078,22 +7016,42 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Managed Blockchain Query</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html</p>
+        <h1>Amazon Lookout for Equipment</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforequipment.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
-        </tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/dataset.html">dataset</a></td>
+                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:dataset/\${DatasetName}/\${DatasetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/model.html">model</a></td>
+                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:model/\${ModelName}/\${ModelId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/model-version.html">model-version</a></td>
+                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:model/\${ModelName}/\${ModelId}/model-version/\${ModelVersionNumber}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/inference-scheduler.html">inference-scheduler</a></td>
+                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:inference-scheduler/\${InferenceSchedulerName}/\${InferenceSchedulerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/lookout-for-equipment/latest/ug/label-group.html">label-group</a></td>
+                    <td>arn:\${Partition}:lookoutequipment:\${Region}:\${Account}:label-group/\${LabelGroupName}/\${LabelGroupId}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon Macie</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmacie.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7118,44 +7076,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Managed Grafana</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedgrafana.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/grafana/latest/userguide/security-iam.html">workspace</a></td>
-                    <td>arn:\${Partition}:grafana:\${Region}:\${Account}:/workspaces/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Marketplace Catalog</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecatalog.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DescribeEntity.html#API_DescribeEntity_ResponseSyntax">Entity</a></td>
-                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:\${Catalog}/\${EntityType}/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_ResponseSyntax">ChangeSet</a></td>
-                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:\${Catalog}/ChangeSet/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Managed Streaming for Kafka Connect</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforkafkaconnect.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7172,106 +7098,38 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Lookout for Metrics</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutformetrics.html</p>
+        <h1>Amazon Managed Service for Prometheus</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedserviceforprometheus.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_AnomalyDetectorSummary.html">AnomalyDetector</a></td>
-                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:AnomalyDetector:\${AnomalyDetectorName}</td>
+                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">workspace</a></td>
+                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:workspace/\${WorkspaceId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_MetricSetSummary.html">MetricSet</a></td>
-                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:MetricSet/\${AnomalyDetectorName}/\${MetricSetName}</td>
+                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">rulegroupsnamespace</a></td>
+                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:rulegroupsnamespace/\${WorkspaceId}/\${Namespace}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/lookoutmetrics/latest/api/API_AlertSummary.html">Alert</a></td>
-                    <td>arn:\${Partition}:lookoutmetrics:\${Region}:\${Account}:Alert:\${AlertName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Marketplace Deployment Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacedeploymentservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_DeploymentParameterInput.html">DeploymentParameter</a></td>
-                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:DeploymentParameter:catalogs/\${CatalogName}/products/\${ProductId}/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Managed Workflows for Apache Airflow</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedworkflowsforapacheairflow.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-mwaa.html">environment</a></td>
-                    <td>arn:\${Partition}:airflow:\${Region}:\${Account}:environment/\${EnvironmentName}</td>
+                    <td><a href="https://docs.aws.amazon.com/prometheus/latest/userguide/security-iam.html">scraper</a></td>
+                    <td>arn:\${Partition}:aps:\${Region}:\${Account}:scraper/\${ScraperId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-policies.html">rbac-role</a></td>
-                    <td>arn:\${Partition}:airflow:\${Region}:\${Account}:role/\${EnvironmentName}/\${RoleName}</td>
+                    <td><a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">cluster</a></td>
+                    <td>arn:\${Partition}:eks:\${Region}:\${Account}:cluster/\${ClusterName}</td>
                 </tr>
             </tbody>
-        </table>
-        <h1>AWS Marketplace Commerce Analytics Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecommerceanalyticsservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Marketplace</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplace.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Marketplace Management Portal</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemanagementportal.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Marketplace Private Marketplace</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprivatemarketplace.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
         </table>
         <h1>Amazon Lightsail</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlightsail.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7352,12 +7210,120 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Managed Grafana</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedgrafana.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/grafana/latest/userguide/security-iam.html">workspace</a></td>
+                    <td>arn:\${Partition}:grafana:\${Region}:\${Account}:/workspaces/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Managed Streaming for Apache Kafka</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html">cluster</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:cluster/\${ClusterName}/\${Uuid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html">configuration</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:configuration/\${ConfigurationName}/\${Uuid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections-arn.html">vpc-connection</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${VpcOwnerAccount}:vpc-connection/\${ClusterOwnerAccount}/\${ClusterName}/\${Uuid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html">replicator</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:replicator/\${ReplicatorName}/\${Uuid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">topic</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:topic/\${ClusterName}/\${ClusterUuid}/\${TopicName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">group</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:group/\${ClusterName}/\${ClusterUuid}/\${GroupName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources">transactional-id</a></td>
+                    <td>arn:\${Partition}:kafka:\${Region}:\${Account}:transactional-id/\${ClusterName}/\${ClusterUuid}/\${TransactionalId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Marketplace</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplace.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Managed Workflows for Apache Airflow</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedworkflowsforapacheairflow.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-mwaa.html">environment</a></td>
+                    <td>arn:\${Partition}:airflow:\${Region}:\${Account}:environment/\${EnvironmentName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-policies.html">rbac-role</a></td>
+                    <td>arn:\${Partition}:airflow:\${Region}:\${Account}:role/\${EnvironmentName}/\${RoleName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Marketplace Catalog</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecatalog.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DescribeEntity.html#API_DescribeEntity_ResponseSyntax">Entity</a></td>
+                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:\${Catalog}/\${EntityType}/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_ResponseSyntax">ChangeSet</a></td>
+                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:\${Catalog}/ChangeSet/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Marketplace Commerce Analytics Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecommerceanalyticsservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS Marketplace Discovery</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacediscovery.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -7367,17 +7333,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Marketplace Image Building Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceimagebuildingservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -7387,7 +7343,61 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Marketplace Deployment Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacedeploymentservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_DeploymentParameterInput.html">DeploymentParameter</a></td>
+                    <td>arn:\${Partition}:aws-marketplace:\${Region}:\${Account}:DeploymentParameter:catalogs/\${CatalogName}/products/\${ProductId}/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Marketplace Private Marketplace</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprivatemarketplace.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Marketplace Management Portal</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemanagementportal.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Marketplace Image Building Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceimagebuildingservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Marketplace Procurement Systems Integration</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprocurementsystemsintegration.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -7397,7 +7407,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7406,22 +7416,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Marketplace Procurement Systems Integration</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprocurementsystemsintegration.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>AWS Marketplace Vendor Insights</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacevendorinsights.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7439,7 +7439,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -7449,7 +7449,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -7459,45 +7459,17 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
-        </table>
-        <h1>AWS Microservice Extractor for .NET</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmicroserviceextractorfor.net.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Migration Hub</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_ProgressUpdateStreamSummary.html">progressUpdateStream</a></td>
-                    <td>arn:\${Partition}:mgh:\${Region}:\${Account}:progressUpdateStream/\${Stream}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_MigrationTask.html">migrationTask</a></td>
-                    <td>arn:\${Partition}:mgh:\${Region}:\${Account}:progressUpdateStream/\${Stream}/migrationTask/\${Task}</td>
-                </tr>
-            </tbody>
         </table>
         <h1>AWS Migration Acceleration Program Credits</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationaccelerationprogramcredits.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7506,90 +7478,22 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Migration Hub Strategy Recommendations</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubstrategyrecommendations.html</p>
+        <h1>AWS Microservice Extractor for .NET</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmicroserviceextractorfor.net.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
-        </table>
-        <h1>AWS Migration Hub Refactor Spaces</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubrefactorspaces.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">environment</a></td>
-                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">application</a></td>
-                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">service</a></td>
-                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}/service/\${ServiceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">route</a></td>
-                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}/route/\${RouteId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Mobile Analytics</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmobileanalytics.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon Monitron</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmonitron.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/Monitron/latest/user-guide/projects-chapter.html">project</a></td>
-                    <td>arn:\${Partition}:monitron:\${Region}:\${Account}:project/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Migration Hub Orchestrator</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhuborchestrator.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/workflow.html">workflow</a></td>
-                    <td>arn:\${Partition}:migrationhub-orchestrator:\${Region}:\${Account}:workflow/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/templates.html">template</a></td>
-                    <td>arn:\${Partition}:migrationhub-orchestrator:\${Region}:\${Account}:template/\${ResourceId}</td>
-                </tr>
-            </tbody>
         </table>
         <h1>Amazon MemoryDB</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmemorydb.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7622,36 +7526,108 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Neptune</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptune.html</p>
+        <h1>AWS Migration Hub</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/neptune/latest/userguide/iam-data-resources.html">database</a></td>
-                    <td>arn:\${Partition}:neptune-db:\${Region}:\${Account}:\${RelativeId}/database</td>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_ProgressUpdateStreamSummary.html">progressUpdateStream</a></td>
+                    <td>arn:\${Partition}:mgh:\${Region}:\${Account}:progressUpdateStream/\${Stream}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_MigrationTask.html">migrationTask</a></td>
+                    <td>arn:\${Partition}:mgh:\${Region}:\${Account}:progressUpdateStream/\${Stream}/migrationTask/\${Task}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Network Manager Chat</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanagerchat.html</p>
+        <h1>Amazon Mobile Analytics</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmobileanalytics.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
+        </table>
+        <h1>AWS Migration Hub Orchestrator</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhuborchestrator.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/workflow.html">workflow</a></td>
+                    <td>arn:\${Partition}:migrationhub-orchestrator:\${Region}:\${Account}:workflow/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/templates.html">template</a></td>
+                    <td>arn:\${Partition}:migrationhub-orchestrator:\${Region}:\${Account}:template/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Migration Hub Strategy Recommendations</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubstrategyrecommendations.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Migration Hub Refactor Spaces</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubrefactorspaces.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">environment</a></td>
+                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">application</a></td>
+                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">service</a></td>
+                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}/service/\${ServiceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-resources">route</a></td>
+                    <td>arn:\${Partition}:refactor-spaces:\${Region}:\${Account}:environment/\${EnvironmentId}/application/\${ApplicationId}/route/\${RouteId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Monitron</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmonitron.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/Monitron/latest/user-guide/projects-chapter.html">project</a></td>
+                    <td>arn:\${Partition}:monitron:\${Region}:\${Account}:project/\${ResourceId}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon MQ</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmq.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7664,12 +7640,154 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Network Manager Chat</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanagerchat.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Neptune</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptune.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/neptune/latest/userguide/iam-data-resources.html">database</a></td>
+                    <td>arn:\${Partition}:neptune-db:\${Region}:\${Account}:\${RelativeId}/database</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Neptune Analytics</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#graph">graph</a></td>
+                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:graph/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#graph-snapshot">graph-snapshot</a></td>
+                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:graph-snapshot/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#import-task">import-task</a></td>
+                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:import-task/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon One Enterprise</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazononeenterprise.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-device-instance.html">device-instance</a></td>
+                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-instance/\${DeviceInstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/configure-instance.html">configuration</a></td>
+                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-instance/\${DeviceInstanceId}/configuration/\${Version}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-config-template.html">device-configuration-template</a></td>
+                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-configuration-template/\${TemplateId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-sites.html">site</a></td>
+                    <td>arn:\${Partition}:one:\${Region}:\${Account}:site/\${SiteId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/enrollment-entry.html">user</a></td>
+                    <td>arn:\${Partition}:one:\${Region}:\${Account}:user/\${UserId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon OpenSearch Ingestion</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_Pipeline.html">pipeline</a></td>
+                    <td>arn:\${Partition}:osis:\${Region}:\${Account}:pipeline/\${PipelineName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_PipelineBlueprint.html">pipeline-blueprint</a></td>
+                    <td>arn:\${Partition}:osis:\${Region}:\${Account}:blueprint/\${BlueprintName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Network Firewall</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkfirewall.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_Firewall.html">Firewall</a></td>
+                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:firewall/\${Name}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_FirewallPolicyResponse.html">FirewallPolicy</a></td>
+                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:firewall-policy/\${Name}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_RuleGroupResponse.html">StatefulRuleGroup</a></td>
+                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:stateful-rulegroup/\${Name}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_RuleGroupResponse.html">StatelessRuleGroup</a></td>
+                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:stateless-rulegroup/\${Name}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_TLSInspectionConfigurationResponse.html">TLSInspectionConfiguration</a></td>
+                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:tls-configuration/\${Name}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon OpenSearch Serverless</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchserverless.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">Collection</a></td>
+                    <td>arn:\${Partition}:aoss:\${Region}:\${Account}:collection/\${CollectionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">Dashboards</a></td>
+                    <td>arn:\${Partition}:aoss:\${Region}:\${Account}:dashboards/default</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon Nimble Studio</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonnimblestudio.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7706,21 +7824,25 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon OpenSearch Ingestion</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html</p>
+        <h1>AWS Panorama</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspanorama.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_Pipeline.html">pipeline</a></td>
-                    <td>arn:\${Partition}:osis:\${Region}:\${Account}:pipeline/\${PipelineName}</td>
+                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-appliance">device</a></td>
+                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:device/\${DeviceId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_PipelineBlueprint.html">pipeline-blueprint</a></td>
-                    <td>arn:\${Partition}:osis:\${Region}:\${Account}:blueprint/\${BlueprintName}</td>
+                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-node">package</a></td>
+                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:package/\${PackageId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-application">applicationInstance</a></td>
+                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:applicationInstance/\${ApplicationInstanceId}</td>
                 </tr>
             </tbody>
         </table>
@@ -7729,7 +7851,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7770,12 +7892,44 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon OpenSearch Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac.html">domain</a></td>
+                    <td>arn:\${Partition}:es:\${Region}:\${Account}:domain/\${DomainName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/slr.html">es_role</a></td>
+                    <td>arn:\${Partition}:iam::\${Account}:role/aws-service-role/es.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/slr.html">opensearchservice_role</a></td>
+                    <td>arn:\${Partition}:iam::\${Account}:role/aws-service-role/opensearchservice.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Partner central account management</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralaccountmanagement.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS OpsWorks Configuration Management</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworksconfigurationmanagement.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7788,84 +7942,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon OpenSearch Serverless</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchserverless.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">Collection</a></td>
-                    <td>arn:\${Partition}:aoss:\${Region}:\${Account}:collection/\${CollectionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">Dashboards</a></td>
-                    <td>arn:\${Partition}:aoss:\${Region}:\${Account}:dashboards/default</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS OpsWorks</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworks.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks.html">stack</a></td>
-                    <td>arn:\${Partition}:opsworks:\${Region}:\${Account}:stack/\${StackId}/</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Network Firewall</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkfirewall.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_Firewall.html">Firewall</a></td>
-                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:firewall/\${Name}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_FirewallPolicyResponse.html">FirewallPolicy</a></td>
-                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:firewall-policy/\${Name}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_RuleGroupResponse.html">StatefulRuleGroup</a></td>
-                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:stateful-rulegroup/\${Name}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_RuleGroupResponse.html">StatelessRuleGroup</a></td>
-                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:stateless-rulegroup/\${Name}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_TLSInspectionConfigurationResponse.html">TLSInspectionConfiguration</a></td>
-                    <td>arn:\${Partition}:network-firewall:\${Region}:\${Account}:tls-configuration/\${Name}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Partner central account management</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralaccountmanagement.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>AWS Outposts</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsoutposts.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7878,86 +7960,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Neptune Analytics</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#graph">graph</a></td>
-                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:graph/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#graph-snapshot">graph-snapshot</a></td>
-                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:graph-snapshot/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-resources.html#import-task">import-task</a></td>
-                    <td>arn:\${Partition}:neptune-graph:\${Region}:\${Account}:import-task/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon One Enterprise</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazononeenterprise.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-device-instance.html">device-instance</a></td>
-                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-instance/\${DeviceInstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/configure-instance.html">configuration</a></td>
-                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-instance/\${DeviceInstanceId}/configuration/\${Version}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-config-template.html">device-configuration-template</a></td>
-                    <td>arn:\${Partition}:one:\${Region}:\${Account}:device-configuration-template/\${TemplateId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/create-sites.html">site</a></td>
-                    <td>arn:\${Partition}:one:\${Region}:\${Account}:site/\${SiteId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/one-enterprise/latest/userguide/enrollment-entry.html">user</a></td>
-                    <td>arn:\${Partition}:one:\${Region}:\${Account}:user/\${UserId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Panorama</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspanorama.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-appliance">device</a></td>
-                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:device/\${DeviceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-node">package</a></td>
-                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:package/\${PackageId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/panorama/latest/dev/gettingstarted-concepts.html#gettingstarted-concepts-application">applicationInstance</a></td>
-                    <td>arn:\${Partition}:panorama:\${Region}:\${Account}:applicationInstance/\${ApplicationInstanceId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Organizations</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -7994,12 +8002,36 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS OpsWorks</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworks.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks.html">stack</a></td>
+                    <td>arn:\${Partition}:opsworks:\${Region}:\${Account}:stack/\${StackId}/</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Payments</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspayments.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
         <h1>AWS Performance Insights</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsperformanceinsights.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8017,7 +8049,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8030,34 +8062,22 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon OpenSearch Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html</p>
+        <h1>Amazon Pinpoint SMS and Voice Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointsmsandvoiceservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac.html">domain</a></td>
-                    <td>arn:\${Partition}:es:\${Region}:\${Account}:domain/\${DomainName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/slr.html">es_role</a></td>
-                    <td>arn:\${Partition}:iam::\${Account}:role/aws-service-role/es.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/slr.html">opensearchservice_role</a></td>
-                    <td>arn:\${Partition}:iam::\${Account}:role/aws-service-role/opensearchservice.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService</td>
-                </tr>
-            </tbody>
+        </tbody>
         </table>
         <h1>Amazon Pinpoint Email Service</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointemailservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8078,32 +8098,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Price List</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspricelist.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Payments</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspayments.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>Amazon Polly</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpolly.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8112,12 +8112,90 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Personalize</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/how-it-works-dataset-schema.html#schema-examples">schema</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:schema/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_FeatureTransformation.html">featureTransformation</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:feature-transformation/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Dataset.html">dataset</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetGroup.html">datasetGroup</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-group/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetImportJob.html">datasetImportJob</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-import-job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/analyzing-data.html">dataInsightsJob</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:data-insights-job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetExportJob.html">datasetExportJob</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-export-job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Solution.html">solution</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:solution/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Campaign.html">campaign</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:campaign/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_EventTracker.html">eventTracker</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:event-tracker/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Recipe.html">recipe</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:recipe/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Algorithm.html">algorithm</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:algorithm/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_BatchInferenceJob.html">batchInferenceJob</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:batch-inference-job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Filter.html">filter</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:filter/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Recommender.html">recommender</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:recommender/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_BatchSegmentJob.html">batchSegmentJob</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:batch-segment-job/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_MetricAttribution.html">metricAttribution</a></td>
+                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:metric-attribution/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Private CA Connector for Active Directory</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforactivedirectory.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8142,36 +8220,22 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Pinpoint SMS and Voice Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointsmsandvoiceservice.html</p>
+        <h1>AWS Price List</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspricelist.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
-        </table>
-        <h1>AWS Private Certificate Authority</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecertificateauthority.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/privateca/latest/userguide/api-permissions.html">certificate-authority</a></td>
-                    <td>arn:\${Partition}:acm-pca:\${Region}:\${Account}:certificate-authority/\${CertificateAuthorityId}</td>
-                </tr>
-            </tbody>
         </table>
         <h1>AWS Purchase Orders Console</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspurchaseordersconsole.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8185,7 +8249,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8306,114 +8370,36 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Private Certificate Authority</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecertificateauthority.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/privateca/latest/userguide/api-permissions.html">certificate-authority</a></td>
+                    <td>arn:\${Partition}:acm-pca:\${Region}:\${Account}:certificate-authority/\${CertificateAuthorityId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon Q</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
-        </table>
-        <h1>Amazon Q Business Q Apps</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/create-app.html">application</a></td>
-                    <td>arn:\${Partition}:qbusiness:\${Region}:\${Account}:application/\${ApplicationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Personalize</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/how-it-works-dataset-schema.html#schema-examples">schema</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:schema/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_FeatureTransformation.html">featureTransformation</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:feature-transformation/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Dataset.html">dataset</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetGroup.html">datasetGroup</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-group/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetImportJob.html">datasetImportJob</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-import-job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/analyzing-data.html">dataInsightsJob</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:data-insights-job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetExportJob.html">datasetExportJob</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:dataset-export-job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Solution.html">solution</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:solution/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Campaign.html">campaign</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:campaign/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_EventTracker.html">eventTracker</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:event-tracker/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Recipe.html">recipe</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:recipe/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Algorithm.html">algorithm</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:algorithm/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_BatchInferenceJob.html">batchInferenceJob</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:batch-inference-job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Filter.html">filter</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:filter/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_Recommender.html">recommender</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:recommender/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_BatchSegmentJob.html">batchSegmentJob</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:batch-segment-job/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/personalize/latest/dg/API_MetricAttribution.html">metricAttribution</a></td>
-                    <td>arn:\${Partition}:personalize:\${Region}:\${Account}:metric-attribution/\${ResourceId}</td>
-                </tr>
-            </tbody>
         </table>
         <h1>Amazon Q Business</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8450,65 +8436,43 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Q in Connect</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html</p>
+        <h1>Amazon Q Business Q Apps</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_AssistantData.html">Assistant</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:assistant/\${AssistantId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_AssistantAssociationData.html">AssistantAssociation</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:association/\${AssistantId}/\${AssistantAssociationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ContentData.html">Content</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:content/\${KnowledgeBaseId}/\${ContentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_KnowledgeBaseData.html">KnowledgeBase</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:knowledge-base/\${KnowledgeBaseId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_SessionData.html">Session</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:session/\${AssistantId}/\${SessionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QuickResponseData.html">QuickResponse</a></td>
-                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:quick-response/\${KnowledgeBaseId}/\${QuickResponseId}</td>
+                    <td><a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/create-app.html">application</a></td>
+                    <td>arn:\${Partition}:qbusiness:\${Region}:\${Account}:application/\${ApplicationId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Recycle Bin</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrecyclebin.html</p>
+        <h1>Amazon QLDB</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqldb.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html#recycle-bin-concepts">rule</a></td>
-                    <td>arn:\${Partition}:rbin:\${Region}:\${Account}:rule/\${ResourceName}</td>
+                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-structure.html">ledger</a></td>
+                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}</td>
                 </tr>
-            </tbody>
-        </table>
-        <h1>Amazon RDS IAM Authentication</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsiamauthentication.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html">db-user</a></td>
-                    <td>arn:\${Partition}:rds-db:\${Region}:\${Account}:dbuser:\${DbiResourceId}/\${DbUserName}</td>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/streams.html">stream</a></td>
+                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:stream/\${LedgerName}/\${StreamId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/working.manage-tables.html">table</a></td>
+                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}/table/\${TableId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/working.catalog.html">catalog</a></td>
+                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}/information_schema/user_tables</td>
                 </tr>
             </tbody>
         </table>
@@ -8517,7 +8481,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8558,40 +8522,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon RDS Data API</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsdataapi.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html">cluster</a></td>
-                    <td>arn:\${Partition}:rds:\${Region}:\${Account}:cluster:\${DbClusterInstanceName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS re:Post Private</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsre_postprivate.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/repostprivate/latest/UserGuide/">space</a></td>
-                    <td>arn:\${Partition}:repostspace:\${Region}:\${Account}:space/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Proton</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsproton.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8656,29 +8592,159 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon QLDB</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqldb.html</p>
+        <h1>Amazon Q in Connect</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-structure.html">ledger</a></td>
-                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}</td>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_AssistantData.html">Assistant</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:assistant/\${AssistantId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/streams.html">stream</a></td>
-                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:stream/\${LedgerName}/\${StreamId}</td>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_AssistantAssociationData.html">AssistantAssociation</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:association/\${AssistantId}/\${AssistantAssociationId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/working.manage-tables.html">table</a></td>
-                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}/table/\${TableId}</td>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ContentData.html">Content</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:content/\${KnowledgeBaseId}/\${ContentId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/qldb/latest/developerguide/working.catalog.html">catalog</a></td>
-                    <td>arn:\${Partition}:qldb:\${Region}:\${Account}:ledger/\${LedgerName}/information_schema/user_tables</td>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_KnowledgeBaseData.html">KnowledgeBase</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:knowledge-base/\${KnowledgeBaseId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_SessionData.html">Session</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:session/\${AssistantId}/\${SessionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QuickResponseData.html">QuickResponse</a></td>
+                    <td>arn:\${Partition}:wisdom:\${Region}:\${Account}:quick-response/\${KnowledgeBaseId}/\${QuickResponseId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Recycle Bin</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrecyclebin.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html#recycle-bin-concepts">rule</a></td>
+                    <td>arn:\${Partition}:rbin:\${Region}:\${Account}:rule/\${ResourceName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon RDS IAM Authentication</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsiamauthentication.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html">db-user</a></td>
+                    <td>arn:\${Partition}:rds-db:\${Region}:\${Account}:dbuser:\${DbiResourceId}/\${DbUserName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS re:Post Private</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsre_postprivate.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/repostprivate/latest/UserGuide/">space</a></td>
+                    <td>arn:\${Partition}:repostspace:\${Region}:\${Account}:space/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon RDS Data API</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsdataapi.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html">cluster</a></td>
+                    <td>arn:\${Partition}:rds:\${Region}:\${Account}:cluster:\${DbClusterInstanceName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Redshift Serverless</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-workgroup-namespace.html">namespace</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:namespace/\${NamespaceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html">snapshot</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:snapshot/\${SnapshotId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-workgroup-namespace.html">workgroup</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:workgroup/\${WorkgroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html">recoveryPoint</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:recoverypoint/\${RecoveryPointId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-connecting.html">endpointAccess</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:managedvpcendpoint/\${EndpointAccessId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Redshift Data API</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftdataapi.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">cluster</a></td>
+                    <td>arn:\${Partition}:redshift:\${Region}:\${Account}:cluster:\${ClusterName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-serverless.html">workgroup</a></td>
+                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:workgroup/\${WorkgroupId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Resource Explorer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_View.html">view</a></td>
+                    <td>arn:\${Partition}:resource-explorer-2:\${Region}:\${Account}:view/\${ViewName}/\${ViewUuid}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Index.html">index</a></td>
+                    <td>arn:\${Partition}:resource-explorer-2:\${Region}:\${Account}:index/\${IndexUuid}</td>
                 </tr>
             </tbody>
         </table>
@@ -8687,7 +8753,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
@@ -8697,7 +8763,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8786,86 +8852,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Redshift Data API</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftdataapi.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">cluster</a></td>
-                    <td>arn:\${Partition}:redshift:\${Region}:\${Account}:cluster:\${ClusterName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-serverless.html">workgroup</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:workgroup/\${WorkgroupId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Redshift Serverless</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-workgroup-namespace.html">namespace</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:namespace/\${NamespaceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html">snapshot</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:snapshot/\${SnapshotId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-workgroup-namespace.html">workgroup</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:workgroup/\${WorkgroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html">recoveryPoint</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:recoverypoint/\${RecoveryPointId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-connecting.html">endpointAccess</a></td>
-                    <td>arn:\${Partition}:redshift-serverless:\${Region}:\${Account}:managedvpcendpoint/\${EndpointAccessId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Resource Access Manager (RAM)</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanagerram.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShare.html">resource-share</a></td>
-                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:resource-share/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShareInvitation.html">resource-share-invitation</a></td>
-                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:resource-share-invitation/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceSharePermissionDetail.html">permission</a></td>
-                    <td>arn:\${Partition}:ram::\${Account}:permission/\${ResourcePath}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceSharePermissionDetail.html">customer-managed-permission</a></td>
-                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:permission/\${ResourcePath}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon Rekognition</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrekognition.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8895,7 +8887,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -8916,36 +8908,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon RHEL Knowledgebase Portal</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrhelknowledgebaseportal.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Resource Groups</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ARG/latest/userguide/resource-groups.html">group</a></td>
-                    <td>arn:\${Partition}:resource-groups:\${Region}:\${Account}:group/\${GroupName}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>Amazon RDS</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9046,170 +9014,38 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Route 53 Recovery Controls</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html</p>
+        <h1>AWS Resource Access Manager (RAM)</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanagerram.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster.html">cluster</a></td>
-                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:cluster/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShare.html">resource-share</a></td>
+                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:resource-share/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/controlpanel.html">controlpanel</a></td>
-                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}</td>
+                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShareInvitation.html">resource-share-invitation</a></td>
+                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:resource-share-invitation/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/routingcontrol.html">routingcontrol</a></td>
-                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/routingcontrol/\${RoutingControlId}</td>
+                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceSharePermissionDetail.html">permission</a></td>
+                    <td>arn:\${Partition}:ram::\${Account}:permission/\${ResourcePath}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/safetyrule.html">safetyrule</a></td>
-                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/safetyrule/\${SafetyRuleId}</td>
+                    <td><a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceSharePermissionDetail.html">customer-managed-permission</a></td>
+                    <td>arn:\${Partition}:ram:\${Region}:\${Account}:permission/\${ResourcePath}</td>
                 </tr>
             </tbody>
-        </table>
-        <h1>AWS Resource Explorer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_View.html">view</a></td>
-                    <td>arn:\${Partition}:resource-explorer-2:\${Region}:\${Account}:view/\${ViewName}/\${ViewUuid}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Index.html">index</a></td>
-                    <td>arn:\${Partition}:resource-explorer-2:\${Region}:\${Account}:index/\${IndexUuid}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Route 53 Profiles enables sharing DNS settings with VPCs</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profilesenablessharingdnssettingswithvpcs.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/Route53/latest/APIReference/#access-control-resources">profile</a></td>
-                    <td>arn:\${Partition}:route53profiles:\${Region}:\${Account}:profile/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/Route53/latest/APIReference/#access-control-resources">profile-association</a></td>
-                    <td>arn:\${Partition}:route53profiles:\${Region}:\${Account}:profile-association/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Route 53 Application Recovery Controller - Zonal Shift</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53applicationrecoverycontroller-zonalshift.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.resource-types.html">ALB</a></td>
-                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/app/\${LoadBalancerName}/\${LoadBalancerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.resource-types.html">NLB</a></td>
-                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/net/\${LoadBalancerName}/\${LoadBalancerId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS RoboMaker</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrobomaker.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-robot-applications.html">robotApplication</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:robot-application/\${ApplicationName}/\${CreatedOnEpoch}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-simulation-applications.html">simulationApplication</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-application/\${ApplicationName}/\${CreatedOnEpoch}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/simulation.html">simulationJob</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-job/\${SimulationJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/simulation-job-batch.html">simulationJobBatch</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-job-batch/\${SimulationJobBatchId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/deployment.html">deploymentJob</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:deployment-job/\${DeploymentJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html">robot</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:robot/\${RobotName}/\${CreatedOnEpoch}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-simulation-applications.html">deploymentFleet</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:deployment-fleet/\${FleetName}/\${CreatedOnEpoch}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-generation-jobs.html">worldGenerationJob</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-generation-job/\${WorldGenerationJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-export-jobs.html">worldExportJob</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-export-job/\${WorldExportJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-simworld-templates.html">worldTemplate</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-template/\${WorldTemplateJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-generated-worlds.html">world</a></td>
-                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world/\${WorldId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Route 53 Recovery Cluster</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycluster.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/routingcontrol.html">routingcontrol</a></td>
-                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/routingcontrol/\${RoutingControlId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Route 53 Domains</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53domains.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
         </table>
         <h1>Amazon Redshift</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9294,43 +9130,141 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon S3 Express</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html</p>
+        <h1>Amazon RHEL Knowledgebase Portal</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrhelknowledgebaseportal.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Resource Groups</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-express-zonal-buckets.html">bucket</a></td>
-                    <td>arn:\${Partition}:s3express:\${Region}:\${Account}:bucket/\${BucketName}</td>
+                    <td><a href="https://docs.aws.amazon.com/ARG/latest/userguide/resource-groups.html">group</a></td>
+                    <td>arn:\${Partition}:resource-groups:\${Region}:\${Account}:group/\${GroupName}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon Route 53 Recovery Readiness</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoveryreadiness.html</p>
+        <h1>AWS RoboMaker</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrobomaker.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.readiness-checks.html">readinesscheck</a></td>
-                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:readiness-check/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-robot-applications.html">robotApplication</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:robot-application/\${ApplicationName}/\${CreatedOnEpoch}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.readiness-checks.html">resourceset</a></td>
-                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:resource-set/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-simulation-applications.html">simulationApplication</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-application/\${ApplicationName}/\${CreatedOnEpoch}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.html">cell</a></td>
-                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:cell/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/simulation.html">simulationJob</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-job/\${SimulationJobId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.html">recoverygroup</a></td>
-                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:recovery-group/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/simulation-job-batch.html">simulationJobBatch</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:simulation-job-batch/\${SimulationJobBatchId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/deployment.html">deploymentJob</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:deployment-job/\${DeploymentJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html">robot</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:robot/\${RobotName}/\${CreatedOnEpoch}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/managing-simulation-applications.html">deploymentFleet</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:deployment-fleet/\${FleetName}/\${CreatedOnEpoch}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-generation-jobs.html">worldGenerationJob</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-generation-job/\${WorldGenerationJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-export-jobs.html">worldExportJob</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-export-job/\${WorldExportJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-simworld-templates.html">worldTemplate</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world-template/\${WorldTemplateJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/robomaker/latest/dg/worlds-managing-generated-worlds.html">world</a></td>
+                    <td>arn:\${Partition}:robomaker:\${Region}:\${Account}:world/\${WorldId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Route 53 Recovery Cluster</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycluster.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/routingcontrol.html">routingcontrol</a></td>
+                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/routingcontrol/\${RoutingControlId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Route 53 Domains</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53domains.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Route 53 Application Recovery Controller - Zonal Shift</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53applicationrecoverycontroller-zonalshift.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.resource-types.html">ALB</a></td>
+                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/app/\${LoadBalancerName}/\${LoadBalancerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.resource-types.html">NLB</a></td>
+                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/net/\${LoadBalancerName}/\${LoadBalancerId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Route 53 Profiles enables sharing DNS settings with VPCs</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profilesenablessharingdnssettingswithvpcs.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/Route53/latest/APIReference/#access-control-resources">profile</a></td>
+                    <td>arn:\${Partition}:route53profiles:\${Region}:\${Account}:profile/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/Route53/latest/APIReference/#access-control-resources">profile-association</a></td>
+                    <td>arn:\${Partition}:route53profiles:\${Region}:\${Account}:profile-association/\${ResourceId}</td>
                 </tr>
             </tbody>
         </table>
@@ -9339,7 +9273,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9380,12 +9314,166 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon Route 53 Recovery Controls</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster.html">cluster</a></td>
+                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:cluster/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/controlpanel.html">controlpanel</a></td>
+                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/routingcontrol.html">routingcontrol</a></td>
+                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/routingcontrol/\${RoutingControlId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/safetyrule.html">safetyrule</a></td>
+                    <td>arn:\${Partition}:route53-recovery-control::\${Account}:controlpanel/\${ControlPanelId}/safetyrule/\${SafetyRuleId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon S3 Express</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-express-zonal-buckets.html">bucket</a></td>
+                    <td>arn:\${Partition}:s3express:\${Region}:\${Account}:bucket/\${BucketName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon S3 Glacier</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html">vault</a></td>
+                    <td>arn:\${Partition}:glacier:\${Region}:\${Account}:vaults/\${VaultName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Route 53 Recovery Readiness</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoveryreadiness.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.readiness-checks.html">readinesscheck</a></td>
+                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:readiness-check/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.readiness-checks.html">resourceset</a></td>
+                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:resource-set/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.html">cell</a></td>
+                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:cell/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.html">recoverygroup</a></td>
+                    <td>arn:\${Partition}:route53-recovery-readiness::\${Account}:recovery-group/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon SageMaker geospatial capabilities</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-eoj.html">EarthObservationJob</a></td>
+                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:earth-observation-job/\${JobID}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-data-collections.html">RasterDataCollection</a></td>
+                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:raster-data-collection/\${CollectionID}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-vej.html">VectorEnrichmentJob</a></td>
+                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:vector-enrichment-job/\${JobID}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon S3 Object Lambda</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3objectlambda.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transforming-objects.html">objectlambdaaccesspoint</a></td>
+                    <td>arn:\${Partition}:s3-object-lambda:\${Region}:\${Account}:accesspoint/\${AccessPointName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon SageMaker Ground Truth Synthetic</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergroundtruthsynthetic.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Savings Plans</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssavingsplans.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html">savingsplan</a></td>
+                    <td>arn:\${Partition}:savingsplans::\${Account}:savingsplan/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Secrets Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources">Secret</a></td>
+                    <td>arn:\${Partition}:secretsmanager:\${Region}:\${Account}:secret:\${SecretId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon Route 53 Resolver</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53resolver.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9430,114 +9518,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon S3 Glacier</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html">vault</a></td>
-                    <td>arn:\${Partition}:glacier:\${Region}:\${Account}:vaults/\${VaultName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Savings Plans</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssavingsplans.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html">savingsplan</a></td>
-                    <td>arn:\${Partition}:savingsplans::\${Account}:savingsplan/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon SageMaker Ground Truth Synthetic</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergroundtruthsynthetic.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon SageMaker geospatial capabilities</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-eoj.html">EarthObservationJob</a></td>
-                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:earth-observation-job/\${JobID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-data-collections.html">RasterDataCollection</a></td>
-                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:raster-data-collection/\${CollectionID}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-vej.html">VectorEnrichmentJob</a></td>
-                    <td>arn:\${Partition}:sagemaker-geospatial:\${Region}:\${Account}:vector-enrichment-job/\${JobID}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Security Lake</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/security-lake/latest/APIReference/API_DataLakeResource.html">data-lake</a></td>
-                    <td>arn:\${Partition}:securitylake:\${Region}:\${Account}:data-lake/default</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/security-lake/latest/APIReference/API_SubscriberResource.html">subscriber</a></td>
-                    <td>arn:\${Partition}:securitylake:\${Region}:\${Account}:subscriber/\${SubscriberId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon S3 Object Lambda</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3objectlambda.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transforming-objects.html">objectlambdaaccesspoint</a></td>
-                    <td>arn:\${Partition}:s3-object-lambda:\${Region}:\${Account}:accesspoint/\${AccessPointName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Server Migration Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservermigrationservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
         <h1>Amazon S3 on Outposts</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3onoutposts.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9558,26 +9544,12 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Secrets Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources">Secret</a></td>
-                    <td>arn:\${Partition}:secretsmanager:\${Region}:\${Account}:secret:\${SecretId}</td>
-                </tr>
-            </tbody>
-        </table>
         <h1>AWS Security Token Service</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecuritytokenservice.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9594,26 +9566,36 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Service Quotas</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html</p>
+        <h1>AWS Serverless Application Repository</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserverlessapplicationrepository.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/identity-access-management.html#resources">quota</a></td>
-                    <td>arn:\${Partition}:servicequotas:\${Region}:\${Account}:\${ServiceCode}/\${QuotaCode}</td>
+                    <td><a href="https://docs.aws.amazon.com/serverlessrepo/latest/devguide/applications.html">applications</a></td>
+                    <td>arn:\${Partition}:serverlessrepo:\${Region}:\${Account}:applications/\${ResourceId}</td>
                 </tr>
             </tbody>
+        </table>
+        <h1>AWS Server Migration Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservermigrationservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
         </table>
         <h1>AWS Security Hub</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityhub.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -9638,394 +9620,30 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon SES</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonses.html</p>
+        <h1>Amazon Security Lake</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">configuration-set</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:configuration-set/\${ConfigurationSetName}</td>
+                    <td><a href="https://docs.aws.amazon.com/security-lake/latest/APIReference/API_DataLakeResource.html">data-lake</a></td>
+                    <td>arn:\${Partition}:securitylake:\${Region}:\${Account}:data-lake/default</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_CustomVerificationEmailTemplate.html">custom-verification-email-template</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:custom-verification-email-template/\${TemplateName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_IdentityInfo.html">identity</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:identity/\${IdentityName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html">template</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:template/\${TemplateName}</td>
+                    <td><a href="https://docs.aws.amazon.com/security-lake/latest/APIReference/API_SubscriberResource.html">subscriber</a></td>
+                    <td>arn:\${Partition}:securitylake:\${Region}:\${Account}:subscriber/\${SubscriberId}</td>
                 </tr>
             </tbody>
-        </table>
-        <h1>AWS Serverless Application Repository</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserverlessapplicationrepository.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/serverlessrepo/latest/devguide/applications.html">applications</a></td>
-                    <td>arn:\${Partition}:serverlessrepo:\${Region}:\${Account}:applications/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon SimpleDB</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/DataModel.html">domain</a></td>
-                    <td>arn:\${Partition}:sdb:\${Region}:\${Account}:domain/\${DomainName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Signer</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssigner.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html">signing-profile</a></td>
-                    <td>arn:\${Partition}:signer:\${Region}:\${Account}:/signing-profiles/\${ProfileName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/signer/latest/developerguide/gs-job.html">signing-job</a></td>
-                    <td>arn:\${Partition}:signer:\${Region}:\${Account}:/signing-jobs/\${JobId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Shield</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshield.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_AttackDetail.html">attack</a></td>
-                    <td>arn:\${Partition}:shield::\${Account}:attack/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_Protection.html">protection</a></td>
-                    <td>arn:\${Partition}:shield::\${Account}:protection/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_ProtectionGroup.html">protection-group</a></td>
-                    <td>arn:\${Partition}:shield::\${Account}:protection-group/\${Id}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Snow Device Management</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowdevicemanagement.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/snowball/latest/snowcone-guide/aws-sdms.html">managed-device</a></td>
-                    <td>arn:\${Partition}:snow-device-management:\${Region}:\${Account}:managed-device/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/snowball/latest/snowcone-guide/aws-sdms.html">task</a></td>
-                    <td>arn:\${Partition}:snow-device-management:\${Region}:\${Account}:task/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS service providing managed private networks</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network</a></td>
-                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network/\${NetworkName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network-site</a></td>
-                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network-site/\${NetworkName}/\${NetworkSiteName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network-resource</a></td>
-                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network-resource/\${NetworkName}/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">order</a></td>
-                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:order/\${NetworkName}/\${OrderId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">device-identifier</a></td>
-                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:device-identifier/\${NetworkName}/\${DeviceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Signin</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssignin.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS SimSpace Weaver</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssimspaceweaver.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/working-with_configuring-simulation.html">Simulation</a></td>
-                    <td>arn:\${Partition}:simspaceweaver:\${Region}:\${Account}:simulation/\${SimulationName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Simple Email Service v2</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">configuration-set</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:configuration-set/\${ConfigurationSetName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ContactList.html">contact-list</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:contact-list/\${ContactListName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_CustomVerificationEmailTemplateMetadata.html">custom-verification-email-template</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:custom-verification-email-template/\${TemplateName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DedicatedIp.html">dedicated-ip-pool</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:dedicated-ip-pool/\${DedicatedIPPool}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DeliverabilityTestReport.html">deliverability-test-report</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:deliverability-test-report/\${ReportId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ExportJobSummary.html">export-job</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:export-job/\${ExportJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_IdentityInfo.html">identity</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:identity/\${IdentityName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ImportJobSummary.html">import-job</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:import-job/\${ImportJobId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_Template.html">template</a></td>
-                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:template/\${TemplateName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS SQL Workbench</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssqlworkbench.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">connection</a></td>
-                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:connection/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">query</a></td>
-                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:query/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">chart</a></td>
-                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:chart/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">notebook</a></td>
-                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:notebook/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon SQS</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-types.html">queue</a></td>
-                    <td>arn:\${Partition}:sqs:\${Region}:\${Account}:\${QueueName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Service Catalog</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservicecatalog.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_app-registry_CreateApplication.html">Application</a></td>
-                    <td>arn:\${Partition}:servicecatalog:\${Region}:\${Account}:/applications/\${ApplicationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_app-registry_CreateAttributeGroup.html">AttributeGroup</a></td>
-                    <td>arn:\${Partition}:servicecatalog:\${Region}:\${Account}:/attribute-groups/\${AttributeGroupId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_PortfolioDetail.html">Portfolio</a></td>
-                    <td>arn:\${Partition}:catalog:\${Region}:\${Account}:portfolio/\${PortfolioId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProductViewDetail.html">Product</a></td>
-                    <td>arn:\${Partition}:catalog:\${Region}:\${Account}:product/\${ProductId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Simple Workflow Service</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-domains.html">domain</a></td>
-                    <td>arn:\${Partition}:swf::\${Account}:/domain/\${DomainName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Step Functions</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">activity</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:activity:\${ActivityName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-state-machine-executions.html">execution</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:execution:\${StateMachineName}:\${ExecutionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-state-machine-executions.html">express</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:express:\${StateMachineName}:\${ExecutionId}:\${ExpressId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">statemachine</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-cd-aliasing-versioning.html">statemachineversion</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}:\${StateMachineVersionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-cd-aliasing-versioning.html">statemachinealias</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}:\${StateMachineAliasName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">maprun</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:mapRun:\${StateMachineName}/\${MapRunLabel}:\${MapRunId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">labelled execution</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:execution:\${StateMachineName}/\${MapRunLabel}:\${ExecutionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">labelled express</a></td>
-                    <td>arn:\${Partition}:states:\${Region}:\${Account}:express:\${StateMachineName}/\${MapRunLabel}:\${ExecutionId}:\${ExpressId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Snowball</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowball.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>Amazon SNS</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsns.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">topic</a></td>
-                    <td>arn:\${Partition}:sns:\${Region}:\${Account}:\${TopicName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Support App in Slack</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportappinslack.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Support</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
         </table>
         <h1>Amazon S3</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10078,326 +9696,196 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Supply Chain</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html</p>
+        <h1>AWS service providing managed private networks</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html">instance</a></td>
-                    <td>arn:\${Partition}:scn:\${Region}:\${Account}:instance/\${InstanceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network</a></td>
+                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network/\${NetworkName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html">bill-of-materials-import-job</a></td>
-                    <td>arn:\${Partition}:scn:\${Region}:\${Account}:instance/\${InstanceId}/bill-of-materials-import-job/\${JobId}</td>
+                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network-site</a></td>
+                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network-site/\${NetworkName}/\${NetworkSiteName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">network-resource</a></td>
+                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:network-resource/\${NetworkName}/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">order</a></td>
+                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:order/\${NetworkName}/\${OrderId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html">device-identifier</a></td>
+                    <td>arn:\${Partition}:private-networks:\${Region}:\${Account}:device-identifier/\${NetworkName}/\${DeviceId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Systems Manager GUI Connect</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerguiconnect.html</p>
+        <h1>AWS Service Catalog</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservicecatalog.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_app-registry_CreateApplication.html">Application</a></td>
+                    <td>arn:\${Partition}:servicecatalog:\${Region}:\${Account}:/applications/\${ApplicationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_app-registry_CreateAttributeGroup.html">AttributeGroup</a></td>
+                    <td>arn:\${Partition}:servicecatalog:\${Region}:\${Account}:/attribute-groups/\${AttributeGroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_PortfolioDetail.html">Portfolio</a></td>
+                    <td>arn:\${Partition}:catalog:\${Region}:\${Account}:portfolio/\${PortfolioId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProductViewDetail.html">Product</a></td>
+                    <td>arn:\${Partition}:catalog:\${Region}:\${Account}:product/\${ProductId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon SES</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonses.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">configuration-set</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:configuration-set/\${ConfigurationSetName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_CustomVerificationEmailTemplate.html">custom-verification-email-template</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:custom-verification-email-template/\${TemplateName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_IdentityInfo.html">identity</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:identity/\${IdentityName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html">template</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:template/\${TemplateName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Signin</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssignin.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
         </table>
-        <h1>AWS Support Plans</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportplans.html</p>
+        <h1>AWS Shield</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshield.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_AttackDetail.html">attack</a></td>
+                    <td>arn:\${Partition}:shield::\${Account}:attack/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_Protection.html">protection</a></td>
+                    <td>arn:\${Partition}:shield::\${Account}:protection/\${Id}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_ProtectionGroup.html">protection-group</a></td>
+                    <td>arn:\${Partition}:shield::\${Account}:protection-group/\${Id}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Service Quotas</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/identity-access-management.html#resources">quota</a></td>
+                    <td>arn:\${Partition}:servicequotas:\${Region}:\${Account}:\${ServiceCode}/\${QuotaCode}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Signer</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssigner.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html">signing-profile</a></td>
+                    <td>arn:\${Partition}:signer:\${Region}:\${Account}:/signing-profiles/\${ProfileName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/signer/latest/developerguide/gs-job.html">signing-job</a></td>
+                    <td>arn:\${Partition}:signer:\${Region}:\${Account}:/signing-jobs/\${JobId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS SimSpace Weaver</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssimspaceweaver.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/working-with_configuring-simulation.html">Simulation</a></td>
+                    <td>arn:\${Partition}:simspaceweaver:\${Region}:\${Account}:simulation/\${SimulationName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Snowball</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowball.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
         </table>
-        <h1>AWS Sustainability</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssustainability.html</p>
+        <h1>Amazon SimpleDB</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Systems Manager for SAP</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerforsap.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">application</a></td>
-                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">component</a></td>
-                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}/COMPONENT/\${ComponentId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">database</a></td>
-                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}/DB/\${DatabaseId}</td>
+                    <td><a href="https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/DataModel.html">domain</a></td>
+                    <td>arn:\${Partition}:sdb:\${Region}:\${Account}:domain/\${DomainName}</td>
                 </tr>
             </tbody>
-        </table>
-        <h1>Tag Editor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
-        </table>
-        <h1>AWS Storage Gateway</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstoragegateway.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/resource_vtl-devices.html">device</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/device/\${Vtldevice}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/API_AssociateFileSystem.html">fs-association</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:fs-association/\${FsaId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">gateway</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/GettingStartedCreateFileShare.html">share</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:share/\${ShareId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html#storage-gateway-vtl-concepts">tape</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:tape/\${TapeBarcode}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/CreatingCustomTapePool.html">tapepool</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:tapepool/\${PoolId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/GettingStartedCreateVolumes.html">target</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/target/\${IscsiTarget}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html#volume-gateway-concepts">volume</a></td>
-                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/volume/\${VolumeId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Telco Network Builder</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstelconetworkbuilder.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/function-packages.html">function-package</a></td>
-                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:function-package/\${FunctionPackageId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-packages.html">network-package</a></td>
-                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-package/\${NetworkPackageId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-instances.html">network-instance</a></td>
-                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-instance/\${NetworkInstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/function-packages.html">function-instance</a></td>
-                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:function-instance/\${FunctionInstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-operations.html">network-operation</a></td>
-                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-operation/\${NetworkOperationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Timestream</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_Database.html">database</a></td>
-                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:database/\${DatabaseName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_Table.html">table</a></td>
-                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:database/\${DatabaseName}/table/\${TableName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_ScheduledQuery.html">scheduled-query</a></td>
-                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:scheduled-query/\${ScheduledQueryName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Systems Manager Incident Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/response-plans.html">response-plan</a></td>
-                    <td>arn:\${Partition}:ssm-incidents::\${Account}:response-plan/\${ResponsePlan}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/tracking-details.html">incident-record</a></td>
-                    <td>arn:\${Partition}:ssm-incidents::\${Account}:incident-record/\${ResponsePlan}/\${IncidentRecord}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/disaster-recovery-resiliency.html#replication">replication-set</a></td>
-                    <td>arn:\${Partition}:ssm-incidents::\${Account}:replication-set/\${ReplicationSet}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Systems Manager</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanager.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">association</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:association/\${AssociationId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/running-automations.html">automation-execution</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:automation-execution/\${AutomationExecutionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents.html">automation-definition</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:automation-definition/\${AutomationDefinitionName}:\${VersionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html">bucket</a></td>
-                    <td>arn:\${Partition}:s3:::\${BucketName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents.html">document</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:document/\${DocumentName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#EC2_ARN_Format">instance</a></td>
-                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance/\${InstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html">maintenancewindow</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:maintenancewindow/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">managed-instance</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:managed-instance/\${InstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html">managed-instance-inventory</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:managed-instance-inventory/\${InstanceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-working-with-OpsItems.html">opsitem</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsitem/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/application-manager.html">opsmetadata</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsmetadata/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html">parameter</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:parameter/\${ParameterNameWithoutLeadingSlash}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager.html">patchbaseline</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:patchbaseline/\${PatchBaselineIdResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-working-with-OpsItems.html">resourcearn</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsitemgroup/default</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html">session</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:session/\${SessionId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">resourcedatasync</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:resource-data-sync/\${SyncName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">servicesetting</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:servicesetting/\${ResourceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-targets.html">windowtarget</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:windowtarget/\${WindowTargetId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-tasks.html">windowtask</a></td>
-                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:windowtask/\${WindowTaskId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">task</a></td>
-                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task/\${TaskId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Textract</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/textract/latest/dg/API_AdapterOverview.html">adapter</a></td>
-                    <td>arn:\${Partition}:textract:\${Region}:\${Account}:/adapters/\${AdapterId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/textract/latest/dg/API_AdapterVersionOverview.html">adapterversion</a></td>
-                    <td>arn:\${Partition}:textract:\${Region}:\${Account}:/adapters/\${AdapterId}/versions/\${AdapterVersion}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Tax Settings</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstaxsettings.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-        </tbody>
         </table>
         <h1>Amazon SageMaker</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10646,22 +10134,506 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Supply Chain</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html">instance</a></td>
+                    <td>arn:\${Partition}:scn:\${Region}:\${Account}:instance/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html">bill-of-materials-import-job</a></td>
+                    <td>arn:\${Partition}:scn:\${Region}:\${Account}:instance/\${InstanceId}/bill-of-materials-import-job/\${JobId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Snow Device Management</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowdevicemanagement.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/snowball/latest/snowcone-guide/aws-sdms.html">managed-device</a></td>
+                    <td>arn:\${Partition}:snow-device-management:\${Region}:\${Account}:managed-device/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/snowball/latest/snowcone-guide/aws-sdms.html">task</a></td>
+                    <td>arn:\${Partition}:snow-device-management:\${Region}:\${Account}:task/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Simple Email Service v2</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">configuration-set</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:configuration-set/\${ConfigurationSetName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ContactList.html">contact-list</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:contact-list/\${ContactListName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_CustomVerificationEmailTemplateMetadata.html">custom-verification-email-template</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:custom-verification-email-template/\${TemplateName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DedicatedIp.html">dedicated-ip-pool</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:dedicated-ip-pool/\${DedicatedIPPool}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DeliverabilityTestReport.html">deliverability-test-report</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:deliverability-test-report/\${ReportId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ExportJobSummary.html">export-job</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:export-job/\${ExportJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_IdentityInfo.html">identity</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:identity/\${IdentityName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ImportJobSummary.html">import-job</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:import-job/\${ImportJobId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_Template.html">template</a></td>
+                    <td>arn:\${Partition}:ses:\${Region}:\${Account}:template/\${TemplateName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Simple Workflow Service</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-domains.html">domain</a></td>
+                    <td>arn:\${Partition}:swf::\${Account}:/domain/\${DomainName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon SNS</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsns.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">topic</a></td>
+                    <td>arn:\${Partition}:sns:\${Region}:\${Account}:\${TopicName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Step Functions</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">activity</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:activity:\${ActivityName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-state-machine-executions.html">execution</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:execution:\${StateMachineName}:\${ExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-state-machine-executions.html">express</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:express:\${StateMachineName}:\${ExecutionId}:\${ExpressId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">statemachine</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-cd-aliasing-versioning.html">statemachineversion</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}:\${StateMachineVersionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-cd-aliasing-versioning.html">statemachinealias</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:stateMachine:\${StateMachineName}:\${StateMachineAliasName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">maprun</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:mapRun:\${StateMachineName}/\${MapRunLabel}:\${MapRunId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">labelled execution</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:execution:\${StateMachineName}/\${MapRunLabel}:\${ExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">labelled express</a></td>
+                    <td>arn:\${Partition}:states:\${Region}:\${Account}:express:\${StateMachineName}/\${MapRunLabel}:\${ExecutionId}:\${ExpressId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon SQS</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-types.html">queue</a></td>
+                    <td>arn:\${Partition}:sqs:\${Region}:\${Account}:\${QueueName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS SQL Workbench</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssqlworkbench.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">connection</a></td>
+                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:connection/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">query</a></td>
+                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:query/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">chart</a></td>
+                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:chart/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html">notebook</a></td>
+                    <td>arn:\${Partition}:sqlworkbench:\${Region}:\${Account}:notebook/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Support</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Support App in Slack</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportappinslack.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Support Plans</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportplans.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Systems Manager for SAP</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerforsap.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">application</a></td>
+                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">component</a></td>
+                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}/COMPONENT/\${ComponentId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/index.html">database</a></td>
+                    <td>arn:\${Partition}:ssm-sap:\${Region}:\${Account}:\${ApplicationType}/\${ApplicationId}/DB/\${DatabaseId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Storage Gateway</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstoragegateway.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/resource_vtl-devices.html">device</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/device/\${Vtldevice}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/API_AssociateFileSystem.html">fs-association</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:fs-association/\${FsaId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">gateway</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/GettingStartedCreateFileShare.html">share</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:share/\${ShareId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html#storage-gateway-vtl-concepts">tape</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:tape/\${TapeBarcode}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/CreatingCustomTapePool.html">tapepool</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:tapepool/\${PoolId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/GettingStartedCreateVolumes.html">target</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/target/\${IscsiTarget}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html#volume-gateway-concepts">volume</a></td>
+                    <td>arn:\${Partition}:storagegateway:\${Region}:\${Account}:gateway/\${GatewayId}/volume/\${VolumeId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Systems Manager Incident Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/response-plans.html">response-plan</a></td>
+                    <td>arn:\${Partition}:ssm-incidents::\${Account}:response-plan/\${ResponsePlan}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/tracking-details.html">incident-record</a></td>
+                    <td>arn:\${Partition}:ssm-incidents::\${Account}:incident-record/\${ResponsePlan}/\${IncidentRecord}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/disaster-recovery-resiliency.html#replication">replication-set</a></td>
+                    <td>arn:\${Partition}:ssm-incidents::\${Account}:replication-set/\${ReplicationSet}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Sustainability</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssustainability.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Systems Manager GUI Connect</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerguiconnect.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>AWS Tax Settings</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstaxsettings.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Tag Editor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+        </tbody>
+        </table>
+        <h1>Amazon Timestream InfluxDB</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbInstanceSummary.html">db-instance</a></td>
+                    <td>arn:\${Partition}:timestream-influxdb:\${Region}:\${Account}:db-instance/\${DbInstanceIdentifier}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbParameterGroupSummary.html">db-parameter-group</a></td>
+                    <td>arn:\${Partition}:timestream-influxdb:\${Region}:\${Account}:db-parameter-group/\${DbParameterGroupIdentifier}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Timestream</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_Database.html">database</a></td>
+                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:database/\${DatabaseName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_Table.html">table</a></td>
+                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:database/\${DatabaseName}/table/\${TableName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/timestream/latest/developerguide/API_ScheduledQuery.html">scheduled-query</a></td>
+                    <td>arn:\${Partition}:timestream:\${Region}:\${Account}:scheduled-query/\${ScheduledQueryName}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS Tiros</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstiros.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
+        </table>
+        <h1>AWS Telco Network Builder</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstelconetworkbuilder.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/function-packages.html">function-package</a></td>
+                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:function-package/\${FunctionPackageId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-packages.html">network-package</a></td>
+                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-package/\${NetworkPackageId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-instances.html">network-instance</a></td>
+                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-instance/\${NetworkInstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/function-packages.html">function-instance</a></td>
+                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:function-instance/\${FunctionInstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/tnb/latest/ug/network-operations.html">network-operation</a></td>
+                    <td>arn:\${Partition}:tnb:\${Region}:\${Account}:network-operation/\${NetworkOperationId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Systems Manager Incident Manager Contacts</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanagercontacts.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/contacts.html">contact</a></td>
+                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:contact/\${ContactAlias}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/contacts.html">contactchannel</a></td>
+                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:contactchannel/\${ContactAlias}/\${ContactChannelId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/escalation.html">engagement</a></td>
+                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:engagement/\${ContactAlias}/\${EngagementId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/escalation.html">page</a></td>
+                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:page/\${ContactAlias}/\${PageId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-manager-on-call-schedule.html">rotation</a></td>
+                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:rotation/\${RotationId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Trusted Advisor</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/awssupport/latest/APIReference/API_TrustedAdvisorCheckDescription.html">checks</a></td>
+                    <td>arn:\${Partition}:trustedadvisor:\${Region}:\${Account}:checks/\${CategoryCode}/\${CheckId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Textract</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/textract/latest/dg/API_AdapterOverview.html">adapter</a></td>
+                    <td>arn:\${Partition}:textract:\${Region}:\${Account}:/adapters/\${AdapterId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/textract/latest/dg/API_AdapterVersionOverview.html">adapterversion</a></td>
+                    <td>arn:\${Partition}:textract:\${Region}:\${Account}:/adapters/\${AdapterId}/versions/\${AdapterVersion}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon Transcribe</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranscribe.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10702,65 +10674,25 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS Systems Manager Incident Manager Contacts</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanagercontacts.html</p>
+        <h1>AWS User Notifications</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/contacts.html">contact</a></td>
-                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:contact/\${ContactAlias}</td>
+                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">EventRule</a></td>
+                    <td>arn:\${Partition}:notifications::\${Account}:configuration/\${NotificationConfigurationId}/rule/\${EventRuleId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/contacts.html">contactchannel</a></td>
-                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:contactchannel/\${ContactAlias}/\${ContactChannelId}</td>
+                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">NotificationConfiguration</a></td>
+                    <td>arn:\${Partition}:notifications::\${Account}:configuration/\${NotificationConfigurationId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/escalation.html">engagement</a></td>
-                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:engagement/\${ContactAlias}/\${EngagementId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/escalation.html">page</a></td>
-                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:page/\${ContactAlias}/\${PageId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-manager-on-call-schedule.html">rotation</a></td>
-                    <td>arn:\${Partition}:ssm-contacts:\${Region}:\${Account}:rotation/\${RotationId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Timestream InfluxDB</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbInstanceSummary.html">db-instance</a></td>
-                    <td>arn:\${Partition}:timestream-influxdb:\${Region}:\${Account}:db-instance/\${DbInstanceIdentifier}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbParameterGroupSummary.html">db-parameter-group</a></td>
-                    <td>arn:\${Partition}:timestream-influxdb:\${Region}:\${Account}:db-parameter-group/\${DbParameterGroupIdentifier}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Trusted Advisor</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/awssupport/latest/APIReference/API_TrustedAdvisorCheckDescription.html">checks</a></td>
-                    <td>arn:\${Partition}:trustedadvisor:\${Region}:\${Account}:checks/\${CategoryCode}/\${CheckId}</td>
+                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">NotificationEvent</a></td>
+                    <td>arn:\${Partition}:notifications:\${Region}:\${Account}:configuration/\${NotificationConfigurationId}/event/\${NotificationEventId}</td>
                 </tr>
             </tbody>
         </table>
@@ -10769,7 +10701,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10782,12 +10714,102 @@
                 </tr>
             </tbody>
         </table>
+        <h1>AWS Systems Manager</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanager.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">association</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:association/\${AssociationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/running-automations.html">automation-execution</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:automation-execution/\${AutomationExecutionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents.html">automation-definition</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:automation-definition/\${AutomationDefinitionName}:\${VersionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html">bucket</a></td>
+                    <td>arn:\${Partition}:s3:::\${BucketName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents.html">document</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:document/\${DocumentName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#EC2_ARN_Format">instance</a></td>
+                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:instance/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html">maintenancewindow</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:maintenancewindow/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">managed-instance</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:managed-instance/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html">managed-instance-inventory</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:managed-instance-inventory/\${InstanceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-working-with-OpsItems.html">opsitem</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsitem/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/application-manager.html">opsmetadata</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsmetadata/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html">parameter</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:parameter/\${ParameterNameWithoutLeadingSlash}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager.html">patchbaseline</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:patchbaseline/\${PatchBaselineIdResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-working-with-OpsItems.html">resourcearn</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:opsitemgroup/default</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html">session</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:session/\${SessionId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">resourcedatasync</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:resource-data-sync/\${SyncName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html">servicesetting</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:servicesetting/\${ResourceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-targets.html">windowtarget</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:windowtarget/\${WindowTargetId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-tasks.html">windowtask</a></td>
+                    <td>arn:\${Partition}:ssm:\${Region}:\${Account}:windowtask/\${WindowTaskId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">task</a></td>
+                    <td>arn:\${Partition}:ecs:\${Region}:\${Account}:task/\${TaskId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>AWS User Notifications Contacts</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotificationscontacts.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10801,17 +10823,129 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
+        </table>
+        <h1>Amazon VPC Lattice Services</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/services.html">Service</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/\${RequestPath}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>AWS Transfer Family</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransferfamily.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-user.html">user</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:user/\${ServerId}/\${UserName}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/configuring-servers.html">server</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:server/\${ServerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/transfer-workflows.html">workflow</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:workflow/\${WorkflowId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">certificate</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:certificate/\${CertificateId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">connector</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:connector/\${ConnectorId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">profile</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:profile/\${ProfileId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">agreement</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:agreement/\${AgreementId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html">host-key</a></td>
+                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:host-key/\${ServerId}/\${HostKeyId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon Verified Permissions</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/policy-stores.html">policy-store</a></td>
+                    <td>arn:\${Partition}:verifiedpermissions::\${Account}:policy-store/\${PolicyStoreId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon VPC Lattice</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-networks.html">ServiceNetwork</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetwork/\${ServiceNetworkId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/services.html">Service</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-vpc-associations">ServiceNetworkVpcAssociation</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetworkvpcassociation/\${ServiceNetworkVpcAssociationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations">ServiceNetworkServiceAssociation</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetworkserviceassociation/\${ServiceNetworkServiceAssociationId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html">TargetGroup</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:targetgroup/\${TargetGroupId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html">Listener</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/listener/\${ListenerId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html#listener-rules">Rule</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/listener/\${ListenerId}/rule/\${RuleId}</td>
+                </tr>
+               <tr>
+                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/monitoring-access-logs.html">AccessLogSubscription</a></td>
+                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:accesslogsubscription/\${AccessLogSubscriptionId}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>AWS WAF</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswaf.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -10864,193 +10998,57 @@
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon VPC Lattice Services</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html</p>
+        <h1>AWS WAF V2</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafv2.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/services.html">Service</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/\${RequestPath}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS User Notifications</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">EventRule</a></td>
-                    <td>arn:\${Partition}:notifications::\${Account}:configuration/\${NotificationConfigurationId}/rule/\${EventRuleId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">webacl</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/webacl/\${Name}/\${Id}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">NotificationConfiguration</a></td>
-                    <td>arn:\${Partition}:notifications::\${Account}:configuration/\${NotificationConfigurationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_IPSet.html">ipset</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/ipset/\${Name}/\${Id}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/notifications/latest/userguide/resource-level-permissions.html">NotificationEvent</a></td>
-                    <td>arn:\${Partition}:notifications:\${Region}:\${Account}:configuration/\${NotificationConfigurationId}/event/\${NotificationEventId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon Verified Permissions</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/policy-stores.html">policy-store</a></td>
-                    <td>arn:\${Partition}:verifiedpermissions::\${Account}:policy-store/\${PolicyStoreId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon VPC Lattice</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-networks.html">ServiceNetwork</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetwork/\${ServiceNetworkId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_ManagedRuleSet.html">managedruleset</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/managedruleset/\${Name}/\${Id}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/services.html">Service</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_RuleGroup.html">rulegroup</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/rulegroup/\${Name}/\${Id}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-vpc-associations">ServiceNetworkVpcAssociation</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetworkvpcassociation/\${ServiceNetworkVpcAssociationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_RegexPatternSet.html">regexpatternset</a></td>
+                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/regexpatternset/\${Name}/\${Id}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations">ServiceNetworkServiceAssociation</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:servicenetworkserviceassociation/\${ServiceNetworkServiceAssociationId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">loadbalancer/app/</a></td>
+                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/app/\${LoadBalancerName}/\${LoadBalancerId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html">TargetGroup</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:targetgroup/\${TargetGroupId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">apigateway</a></td>
+                    <td>arn:\${Partition}:apigateway:\${Region}::/restapis/\${ApiId}/stages/\${StageName}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html">Listener</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/listener/\${ListenerId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">appsync</a></td>
+                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html#listener-rules">Rule</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:service/\${ServiceId}/listener/\${ListenerId}/rule/\${RuleId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">userpool</a></td>
+                    <td>arn:\${Partition}:cognito-idp:\${Region}:\${Account}:userpool/\${UserPoolId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/monitoring-access-logs.html">AccessLogSubscription</a></td>
-                    <td>arn:\${Partition}:vpc-lattice:\${Region}:\${Account}:accesslogsubscription/\${AccessLogSubscriptionId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Transfer Family</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransferfamily.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-user.html">user</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:user/\${ServerId}/\${UserName}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">apprunner</a></td>
+                    <td>arn:\${Partition}:apprunner:\${Region}:\${Account}:service/\${ServiceName}/\${ServiceId}</td>
                 </tr>
                <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/configuring-servers.html">server</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:server/\${ServerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/transfer-workflows.html">workflow</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:workflow/\${WorkflowId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">certificate</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:certificate/\${CertificateId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">connector</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:connector/\${ConnectorId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">profile</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:profile/\${ProfileId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html">agreement</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:agreement/\${AgreementId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html">host-key</a></td>
-                    <td>arn:\${Partition}:transfer:\${Region}:\${Account}:host-key/\${ServerId}/\${HostKeyId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>AWS Wickr</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswickr.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/wickr/latest/adminguide/">network</a></td>
-                    <td>arn:\${Partition}:wickr:\${Region}:\${Account}:network/\${NetworkId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon WorkLink</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/worklink/latest/api/API_CreateFleet.html">fleet</a></td>
-                    <td>arn:\${Partition}:worklink::\${Account}:fleet/\${FleetName}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon WorkDocs</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/migration-tool.html">organization</a></td>
-                    <td>arn:\${Partition}:workdocs:\${Region}:\${Account}:organization/\${ResourceId}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Amazon WorkMail Message Flow</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html</p>
-        <table>
-            <thead>
-                <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
-            </thead>
-            <tbody>
-           <tr>
-                    <td><a href="https://docs.aws.amazon.com/workmail/latest/adminguide/lambda-content.html">RawMessage</a></td>
-                    <td>arn:\${Partition}:workmailmessageflow:\${Region}:\${Account}:message/\${OrganizationId}/\${Context}/\${MessageId}</td>
+                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">verified-access-instance</a></td>
+                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:verified-access-instance/\${VerifiedAccessInstanceId}</td>
                 </tr>
             </tbody>
         </table>
@@ -11059,7 +11057,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -11085,7 +11083,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -11142,71 +11140,31 @@
                 </tr>
             </tbody>
         </table>
-        <h1>AWS WAF V2</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafv2.html</p>
+        <h1>Amazon WorkDocs</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">webacl</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/webacl/\${Name}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_IPSet.html">ipset</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/ipset/\${Name}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_ManagedRuleSet.html">managedruleset</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/managedruleset/\${Name}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_RuleGroup.html">rulegroup</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/rulegroup/\${Name}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_RegexPatternSet.html">regexpatternset</a></td>
-                    <td>arn:\${Partition}:wafv2:\${Region}:\${Account}:\${Scope}/regexpatternset/\${Name}/\${Id}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">loadbalancer/app/</a></td>
-                    <td>arn:\${Partition}:elasticloadbalancing:\${Region}:\${Account}:loadbalancer/app/\${LoadBalancerName}/\${LoadBalancerId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">apigateway</a></td>
-                    <td>arn:\${Partition}:apigateway:\${Region}::/restapis/\${ApiId}/stages/\${StageName}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">appsync</a></td>
-                    <td>arn:\${Partition}:appsync:\${Region}:\${Account}:apis/\${GraphQLAPIId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">userpool</a></td>
-                    <td>arn:\${Partition}:cognito-idp:\${Region}:\${Account}:userpool/\${UserPoolId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">apprunner</a></td>
-                    <td>arn:\${Partition}:apprunner:\${Region}:\${Account}:service/\${ServiceName}/\${ServiceId}</td>
-                </tr>
-               <tr>
-                    <td><a href="https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html">verified-access-instance</a></td>
-                    <td>arn:\${Partition}:ec2:\${Region}:\${Account}:verified-access-instance/\${VerifiedAccessInstanceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/migration-tool.html">organization</a></td>
+                    <td>arn:\${Partition}:workdocs:\${Region}:\${Account}:organization/\${ResourceId}</td>
                 </tr>
             </tbody>
         </table>
-        <h1>Amazon WorkMail</h1>
-        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html</p>
+        <h1>AWS Wickr</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswickr.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
-                    <td><a href="https://docs.aws.amazon.com/workmail/latest/adminguide/organizations_overview.html">organization</a></td>
-                    <td>arn:\${Partition}:workmail:\${Region}:\${Account}:organization/\${ResourceId}</td>
+                    <td><a href="https://docs.aws.amazon.com/wickr/latest/adminguide/">network</a></td>
+                    <td>arn:\${Partition}:wickr:\${Region}:\${Account}:network/\${NetworkId}</td>
                 </tr>
             </tbody>
         </table>
@@ -11215,17 +11173,31 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         </tbody>
+        </table>
+        <h1>Amazon WorkLink</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/worklink/latest/api/API_CreateFleet.html">fleet</a></td>
+                    <td>arn:\${Partition}:worklink::\${Account}:fleet/\${FleetName}</td>
+                </tr>
+            </tbody>
         </table>
         <h1>Amazon WorkSpaces Thin Client</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -11242,12 +11214,40 @@
                 </tr>
             </tbody>
         </table>
+        <h1>Amazon WorkMail Message Flow</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/workmail/latest/adminguide/lambda-content.html">RawMessage</a></td>
+                    <td>arn:\${Partition}:workmailmessageflow:\${Region}:\${Account}:message/\${OrganizationId}/\${Context}/\${MessageId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Amazon WorkMail</h1>
+        <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="800px">ARN</th> 
+            </thead>
+            <tbody>
+           <tr>
+                    <td><a href="https://docs.aws.amazon.com/workmail/latest/adminguide/organizations_overview.html">organization</a></td>
+                    <td>arn:\${Partition}:workmail:\${Region}:\${Account}:organization/\${ResourceId}</td>
+                </tr>
+            </tbody>
+        </table>
         <h1>Amazon WorkSpaces Web</h1>
         <p>Doc reference: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesweb.html</p>
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -11289,7 +11289,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
@@ -11307,7 +11307,7 @@
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
            <tr>
