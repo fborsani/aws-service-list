@@ -97,7 +97,7 @@ def print_html(data: list) -> str:
         <table>
             <thead>
                 <th width="300px">Service</th>
-                <th width="600px">ARN</th> 
+                <th width="800px">ARN</th> 
             </thead>
             <tbody>
         '''.format(resource["resource"], resource["doc_url"])
