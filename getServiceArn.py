@@ -9,29 +9,42 @@ MAX_THREADS = 15
 
 def thread_worker(url: str):
     row_values = []
-    if url is not None and url != "":
-            link = url
-            if url.startswith("./"):
-                link = AWS_DOC_BASE_URL+url[2:]
-            print("l "+link)
-            r = requests.get(link)
-            soup = BeautifulSoup(r.text, 'html.parser')
-            tables = soup.select("table")  
-            for t in tables:
-                if t.find("th", string=TABLE_MATCH_STRING):
-                    for r in t.find_all("tr"):
-                        cols = r.find_all("td")
-                        if cols:
-                            row_values.append(
-                                {
-                                    "service_html": cols[0].find("a") if cols[0].find("a") else cols[0].text.strip(),
-                                    "service_text": cols[0].text.strip(),
-                                    "arn": cols[1].text.strip(),
-                                    "page_url": url
-                                }
-                            )
-    return row_values
+    success = True
+    msg = None
 
+    if url is not None and url != "":
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, 'html.parser')
+        tables = soup.select("table")  
+        for t in tables:
+            if t.find("th", string=TABLE_MATCH_STRING):
+                for r in t.find_all("tr"):
+                    cols = r.find_all("td")
+                    if cols:
+                        row_values.append(
+                            {
+                                "link": cols[0].find("a")["href"] if cols[0].find("a") else cols[0].text.strip(),
+                                "name": cols[0].text.strip(),
+                                "arn": cols[1].text.strip()
+                            }
+                        )
+                break
+    else:
+        success = False
+        msg = "Url missing or empty"
+
+    return {
+        "success": success,
+        "msg": msg,
+        "result": row_values,
+        "url": url
+        }
+
+def get_full_path(url:str):
+    if url is not None and url != "" and url.startswith("./"):
+        return AWS_DOC_BASE_URL+url[2:]
+    return url
+    
 def print_table(rows:list, cols:list, keys:list, padding:list):
         sep = "|"
         placeholder_none = "*"
@@ -68,16 +81,24 @@ def print_table(rows:list, cols:list, keys:list, padding:list):
 
         return header + sep_row + body
 
-def print_text(data: dict) -> str:
+def print_text(data: list) -> str:
     output = ""
-    for k,v in data.items():
-        output += "========== "+k+" ==========\n\n"
-        output += print_table(v, ["Service Type", "ARN"], ["service_text", "arn"], [40, 135])
+    for i in data:
+        output += "========== "+i["resource"]+" ==========\n\n"
+        output += print_table(i["services"], ["Service Type", "ARN"], ["name", "arn"], [40, 135])
         output +="\n\n"
     return output
 
-def print_markdown(data: dict) -> str:
-    pass
+def print_markdown(data: list) -> str:
+    output = ""
+    for resource in data:
+        output += "# "+resource["resource"] +"\n"
+        output += "Doc reference: "+resource["doc_url"] +"\n"
+        output += "| Service | ARN |" +"\n"
+        output += "|---------|-----|" +"\n"
+        for service in resource["services"]:
+            output += "| [{}]({}) | {} |".format(service["name"], service["link"], service["arn"].replace("$","\$") ) +"\n"
+    return output
 
 def print_html(data: dict) -> str:
     pass
@@ -90,19 +111,28 @@ def main():
     aws_doc_start_url = AWS_DOC_BASE_URL + AWS_DOC_REF_LIST
     r = requests.get(aws_doc_start_url)
     soup = BeautifulSoup(r.text, 'html.parser')
-    links = {l.text : l.find("a")["href"] for l in soup.find(class_="highlights").find_all("li")}
+    links = {l.text : get_full_path(l.find("a")["href"]) for l in soup.find(class_="highlights").find_all("li")}
 
-    service_dict = {}
+    resources = []
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_THREADS) as threadPool:
-         threads = {threadPool.submit(thread_worker, links[page]): page for page in links.keys()}
-
+         threads = {threadPool.submit(thread_worker, links[resource]): resource for resource in links.keys()}
          for thread in concurrent.futures.as_completed(threads):
-             res = thread.result()
-             if res:
-                 service_dict[threads[thread]] = res
+            res = thread.result()
+            if res["success"]:
+                print("[+] "+res["url"])
+                resources.append(
+                    {
+                        "resource": threads[thread],
+                        "doc_url": res["url"],
+                        "services": res["result"]
+                    }
+                )
+            else:
+                print("[-] Error for page {}: {}".format(res["url"], res["msg"]))
 
-    write_to_file("./generated_docs/aws_services.txt",print_text(service_dict))
+    write_to_file("./aws_services.txt",print_text(resources))
+    write_to_file("./aws_services.md",print_markdown(resources))
 
 
 if __name__ == "__main__":
