@@ -106,7 +106,7 @@ def print_html(data: list) -> str:
                     <td><a href="{}">{}</a></td>
                     <td>{}</td>
                 </tr>
-            '''.format(service["link"], service["name"], service["arn"].replace("$","\$") )
+            '''.format(service["link"], service["name"], service["arn"])
         output += '''</tbody>
         </table>
         '''
