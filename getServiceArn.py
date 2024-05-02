@@ -89,19 +89,29 @@ def print_text(data: list) -> str:
         output +="\n\n"
     return output
 
-def print_markdown(data: list) -> str:
+def print_html(data: list) -> str:
     output = ""
     for resource in data:
-        output += "# "+resource["resource"] +"\n"
-        output += "Doc reference: "+resource["doc_url"] +"\n"
-        output += "| Service | ARN |" +"\n"
-        output += "|---------|-----|" +"\n"
+        output += '''<h1>{}</h1>
+        <p>Doc reference: {}</p>
+        <table>
+            <thead>
+                <th width="300px">Service</th>
+                <th width="600px">ARN</th> 
+            </thead>
+            <tbody>
+        '''.format(resource["resource"], resource["doc_url"])
         for service in resource["services"]:
-            output += "| [{}]({}) | {} |".format(service["name"], service["link"], service["arn"].replace("$","\$") ) +"\n"
+            output += '''   <tr>
+                    <td><a href="{}">{}</a></td>
+                    <td>{}</td>
+                </tr>
+            '''.format(service["link"], service["name"], service["arn"].replace("$","\$") )
+        output += '''</tbody>
+        </table>
+        '''
     return output
 
-def print_html(data: dict) -> str:
-    pass
 
 def write_to_file(path:str, value:str):
     with open(path, "w+") as f:
@@ -131,8 +141,8 @@ def main():
             else:
                 print("[-] Error for page {}: {}".format(res["url"], res["msg"]))
 
-    write_to_file("./aws_services.txt",print_text(resources))
-    write_to_file("./aws_services.md",print_markdown(resources))
+    write_to_file("./generated_docs/aws_services.txt",print_text(resources))
+    write_to_file("./generated_docs/aws_services.md",print_html(resources))
 
 
 if __name__ == "__main__":
